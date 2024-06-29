@@ -1,0 +1,30 @@
+{
+    "name": "aracore/mvc-sample",
+    "autoload": {
+        "psr-4": {
+            "app\\":"./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alvin Raditya",
+            "email": "alvin.raditya@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.4",
+        "mpdf/mpdf": "^6.1",
+        "phpmailer/phpmailer": "^6.6",
+        "phpoffice/phpspreadsheet": "^1.24",
+        "phpoffice/phpword": "^1.2",
+        "dompdf/dompdf": "^1.2",
+        "jenssegers/agent": "^2.6",
+        "whichbrowser/parser": "^2.1",
+        "cbschuld/browser.php": "^1.9",
+        "intervention/image": "^2.7",
+        "laminas/laminas-escaper": "^2.13"
+    },
+    "require-dev": {
+        "larapack/dd": "1.*"
+    }
+}

@@ -1,0 +1,25 @@
+<?php
+$attendaceLegends = [
+    "REG" => "HARI KERJA",
+    "OFF" => "HARI LIBUR",
+    "IDS" => "IZIN DATANG SIANG",
+    "DMML" => "DISPENSASI MASUK MATI LAMPU",
+    "DMR" => "DISPENSASI MASUK REGULER",
+    "IPC" => "IZIN PULANG CEPAT",
+    "DAP" => "DISPENSASI ABSEN PULANG",
+
+    "CT" => "CUTI TAHUNAN",
+    "CKIH" => "CUTI KHUSUS IBADAH HAJI",
+    "ITK" => "IZIN TRAVELING KARYAWAN",
+    "IU" => "IZIN UMROH",
+    "CK" => "CUTI KHUSUS",
+    "S" => "SAKIT",
+    "IBMC" => "IZIN BELUM MEMIMILIKI CUTI",
+
+    "IBA" => "IZIN BENCANA ALAM",
+    "IHP" => "IZIN HARI PENGGANTI",
+    "IJP" => "IZIN JATAH PULANG",
+    "PD" => "PERJALANAN DINAS",
+    "ST" => "SURAT TUGAS",
+    "TR" => "TRAINING",
+];

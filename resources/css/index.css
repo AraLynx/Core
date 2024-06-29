@@ -1,0 +1,119 @@
+.invalid-feedback{
+    margin-top:0 !important;
+    margin-bottom:0.15rem !important;
+    height:1.5em !important;}
+.col-form-label{padding-bottom:0px !important;}
+.btn{margin:2px;}
+
+.avatar{border-radius:50%;}
+.avatar-10{width:10px;}
+.avatar-20{width:20px;}
+.avatar-30{width:30px;}
+.avatar-40{width:40px;}
+.avatar-50{width:50px;}
+.avatar-60{width:60px;}
+.avatar-70{width:70px;}
+.avatar-80{width:80px;}
+.avatar-90{width:90px;}
+.avatar-100{width:100px;}
+
+/* Modal Z Index = 155 */
+.offcanvas {z-index: 1052 !important;}/* SIDE PANEL*/
+.offcanvas-backdrop {z-index: 1051 !important;}/* SIDE PANEL MASKING */
+.k-window {z-index: 1050 !important;}
+
+.k-window-content .container{box-sizing: border-box!important;}
+.k-window-content .container *{box-sizing: border-box!important;}
+
+.k-editor-inline {margin: 0;border-width: 0;box-shadow: none;background: none;}
+.k-editor-inline.k-state-active {border-width: 1px;background: none;}
+
+.file-icon{display: inline-block;float: left;width: 48px;height: 48px;margin-left: 10px;margin-top: 13.5px;}
+li.k-file .file-wrapper .k-upload-action{position: absolute;top: 0;right: 0;}
+li.k-file div.file-wrapper{position: relative;}
+
+.k-grid-border-top td { border-top: 2px solid gray;}
+.k-grid-header{padding-right:17px !important;}
+.k-grid-content-locked:has(+div.k-grid-content.k-auto-scrollable){overflow-x: scroll !important;}
+.k-grid-content-locked + .k-grid-content.k-auto-scrollable{overflow-x: scroll !important;}
+.k-header.justify-content-center .k-link{justify-content: center;}
+
+.k-menu-link {padding:0.2rem !important;}
+.k-button{min-width:0px !important;}
+.k-content, .k-input{ background: none !important; }
+.k-content .chart-wrapper .k-tooltip{ background: #efefef !important; }
+.k-numerictextbox .k-input-inner{text-align: right;}
+.k-switch {font-size:1rem !important;height: 2rem !important;width: 5rem !important;border-radius:1rem !important;}
+.k-switch-track{height: 2rem !important;}
+.k-switch-off .k-switch-thumb-wrap{left:1rem !important;}
+.k-switch-on .k-switch-thumb-wrap{left:calc(100% - 1rem)!important;}
+.k-switch-thumb{height: 2rem !important;width: 2rem !important;border-radius: 1rem !important;}
+
+.k-widget.k-tabstrip *{box-sizing: border-box !important;}
+.k-tabstrip .k-tabstrip-items-wrapper {border-color: rgba(0, 0, 0, 0.08) !important;}
+.k-tabstrip .k-tabstrip-items .k-item{border-color: rgba(0,0,0,0.08) !important;}
+.k-tabstrip .k-tabstrip-items .k-item.k-state-active{border-bottom-color: transparent !important;}
+.k-tabstrip .k-tabstrip-content.k-content.k-state-active{border-color: rgba(0,0,0,0.08) !important;}
+.k-chip{font-size: inherit !important;}
+
+html{font-size:12px;}
+p{font-size:12px;margin-bottom:0;}
+h1{font-size:30px;}
+h2{font-size:24px;}
+h3{font-size:20px;}
+h4{font-size:18px;}
+h5{font-size:16px;}
+h6{font-size:14px;}
+h1, h2, h3, h4, h5, h6, p{margin:0px;}
+
+.grid{display:grid;}
+
+.subpage_menu_icon{
+    height:16px;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+.subpage_content_icon{
+    height:1.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+.cursor-alias {cursor: alias;}
+.cursor-all-scroll {cursor: all-scroll;}
+.cursor-auto {cursor: auto;}
+.cursor-cell {cursor: cell;}
+.cursor-col-resize {cursor: col-resize;}
+.cursor-context-menu {cursor: context-menu;}
+.cursor-copy {cursor: copy;}
+.cursor-crosshair {cursor: crosshair;}
+.cursor-default {cursor: default;}
+.cursor-e-resize {cursor: e-resize;}
+.cursor-ew-resize {cursor: ew-resize;}
+.cursor-grab {cursor: -webkit-grab; cursor: grab;}
+.cursor-grabbing {cursor: -webkit-grabbing; cursor: grabbing;}
+.cursor-help {cursor: help;}
+.cursor-move {cursor: move;}
+.cursor-n-resize {cursor: n-resize;}
+.cursor-ne-resize {cursor: ne-resize;}
+.cursor-nesw-resize {cursor: nesw-resize;}
+.cursor-ns-resize {cursor: ns-resize;}
+.cursor-nw-resize {cursor: nw-resize;}
+.cursor-nwse-resize {cursor: nwse-resize;}
+.cursor-no-drop {cursor: no-drop;}
+.cursor-none {cursor: none;}
+.cursor-not-allowed {cursor: not-allowed;}
+.cursor-pointer {cursor: pointer;}
+.cursor-progress {cursor: progress;}
+.cursor-row-resize {cursor: row-resize;}
+.cursor-s-resize {cursor: s-resize;}
+.cursor-se-resize {cursor: se-resize;}
+.cursor-sw-resize {cursor: sw-resize;}
+.cursor-text {cursor: text;}
+.cursor-url {cursor: url(myBall.cur),auto;}
+.cursor-w-resize {cursor: w-resize;}
+.cursor-wait {cursor: wait;}
+.cursor-zoom-in {cursor: zoom-in;}
+.cursor-zoom-out {cursor: zoom-out;}

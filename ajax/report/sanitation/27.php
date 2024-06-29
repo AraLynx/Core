@@ -1,0 +1,11 @@
+<?php
+    $ajax->addSanitation("post","VehicleGroupId",["int"]);
+    $ajax->addSanitation("post","VehicleTypeId",["int"]);
+    $ajax->addSanitation("post","UnitColor",["string"]);
+    $ajax->addSanitation("post","CompleteDateStart",["date"]);
+    $ajax->addSanitation("post","CompleteDateEnd",["date"]);
+    $ajax->addSanitation("post","UnitEngineNumber",["string"]);
+    $ajax->addSanitation("post","UnitVIN",["string"]);
+    $ajax->addSanitation("post","UnitYear",["int"]);
+    $ajax->addSanitation("post","SalesMethod",["string"]);
+?>

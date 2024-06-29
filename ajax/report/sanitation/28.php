@@ -1,0 +1,12 @@
+<?php
+    $ajax->addSanitation("post","DateType",["string"]);
+    $ajax->addSanitation("post","DateValueStart",["date"]);
+    $ajax->addSanitation("post","DateValueEnd",["date"]);
+    $ajax->addSanitation("post","VehicleGroupId",["int"]);
+    $ajax->addSanitation("post","VehicleTypeId",["int"]);
+    $ajax->addSanitation("post","UnitColor",["string"]);
+    $ajax->addSanitation("post","DocumentNumberValue",["string"]);
+    $ajax->addSanitation("post","EmployeeValue",["string"]);
+    $ajax->addSanitation("post","CustomerValue",["string"]);
+    $ajax->addSanitation("post","Status",["string"]);
+?>

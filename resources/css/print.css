@@ -1,0 +1,25 @@
+.print_header{
+
+}
+    .logo_image{
+        height: 1cm;
+    }
+.print_body{
+
+}
+.print_footer{
+    position: absolute;
+    bottom: 1.5rem;
+    width:calc(100% - 3rem);
+}
+
+table{border-collapse:collapse;/*cellspacing = "0"*/width:100%;}
+table th, table td{ border:1px #cccccc solid; }
+table th{background-color: #1d388d; color:#ffffff; height: 30px; }
+table tr:nth-child(odd){ background-color: #e2f0f6;}
+table tr:nth-child(even){ background-color: #ffffff;}
+
+body.dotmatrix table th, table td{ border:1px #000000 solid; }
+body.dotmatrix table th{background-color: #efefef; color:#000000; height: 25px; }
+body.dotmatrix table tr:nth-child(odd){ background-color: #ffffff;}
+body.dotmatrix table tr:nth-child(even){ background-color: #ffffff;}

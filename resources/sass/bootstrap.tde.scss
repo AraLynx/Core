@@ -1,0 +1,47 @@
+//REDIFINE VARIABLES
+
+
+
+//IMPORT FUNCTIONS & VARIABLES
+@import '../../node_modules/bootstrap/scss/_functions';
+@import '../../node_modules/bootstrap/scss/_variables';
+
+$tde-theme-color:(
+    "chronos" : #0F0E0E,
+    "gaia" : #36C271,
+    "selene" : #738484,
+    "plutus" : #FFCC33,
+    "apihso" : #0d6efd,
+    "payroll" : #9a6432,
+
+    "search" : $primary,
+    "add" : $success,
+    "edit" : $warning,
+    "delete" : $danger,
+    "release" : $secondary,
+    "unrelease" : $secondary,
+    "complete" : $secondary,
+    "cancel" : $secondary,
+
+    "os" : #c23836,
+    "rl" : #fa5505,
+    "rl-ap" : #07a925,
+    "rl-aap" : #07a925,
+    "rl-wap" : #fa5505,
+    "rl-dap" : #c23836,
+    "co" : #212529,
+    "x" : #808080,
+    "nu" : #A9A9A9,
+
+    "export-excel" : $success
+    "close" : $secondary
+);
+
+$theme-colors: map-merge($theme-colors, $tde-theme-color);
+
+//IMPORT BOOTSTRAP LEGACY
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+
+
+

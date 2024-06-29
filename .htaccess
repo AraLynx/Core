@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+
+    RewriteRule ^(resources)/(js|css)/(.+)\-(.+)\.(js|css)$ $1/$2/$3.$5 [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ public/ [QSA,L]
+</IfModule>

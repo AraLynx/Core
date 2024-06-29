@@ -1,0 +1,9 @@
+<?php
+    $ajax->addSanitation("post","VehicleGroupId",["int"]);
+    $ajax->addSanitation("post","VehicleTypeId",["int"]);
+    $ajax->addSanitation("post","ColorDescription",["string"]);
+    $ajax->addSanitation("post","EngineNumber",["string"]);
+    $ajax->addSanitation("post","VIN",["string"]);
+    $ajax->addSanitation("post","Year",["int"]);
+    $ajax->addSanitation("post","StatusId",["string"]);
+?>
