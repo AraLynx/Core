@@ -2,7 +2,7 @@
 <script>
     let otherBranches = <?php echo json_encode($_OTHER_BRANCHES);?>;
 </script>
-<script src="/<?php echo COMMON_JS;?>default_switchBranch.js" defer></script>
+<script src="/<?php echo CORE_JS;?>default_switchBranch.js" defer></script>
 <?php
 $formParams = array(
     "page"  => "default",
@@ -12,7 +12,7 @@ $formParams = array(
     "submitButtonColor" => "warning",
     "submitFontAwesomeIcon" => "fa-solid fa-repeat",
     "submitText" => "SWITCH BRANCH",
-    "ajaxJSUrl" => "'/".COMMON_AJAX."login/loginBranchLogin",
+    "ajaxJSUrl" => "'/".CORE_AJAX."login/loginBranchLogin",
 );
 $form = new \app\pages\Form($formParams);
 $form->begin();

@@ -15,7 +15,7 @@ class PrintOutController extends Controller
     public function __construct()
     {
         parent::__construct();
-        $this->setIsContentChronos(true);
+        $this->setIsContentCore(true);
 
         $this->setLayout('print');
         $this->setViewFolderName('print');
@@ -79,7 +79,7 @@ class PrintOutController extends Controller
             $SP->initParameter($postVariables);
             $SP->removeParameters(["CompanyName","BranchName","POSName"]);
 
-            $reportGenerateReportFilePath = dirname(__DIR__,2)."/Chronos/ajax/report/process/{$ReportId}.php";
+            $reportGenerateReportFilePath = dirname(__DIR__,2)."/Core/ajax/report/process/{$ReportId}.php";
 
             if(file_exists($reportGenerateReportFilePath))
                 require_once $reportGenerateReportFilePath;

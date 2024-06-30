@@ -88,8 +88,8 @@ class Avatar extends Page
             }
             if(!$this->employee["AvatarFileName"] || !file_exists($backDir.ASSET_ROOT."UserAvatar/{$this->employee["AvatarFileName"]}"))
             {
-                if($this->employee["GenderId"] == 1)$this->urlLink = "/".COMMON_IMAGE."avatar-male.png";
-                else $this->urlLink = "/".COMMON_IMAGE."avatar-female.png";
+                if($this->employee["GenderId"] == 1)$this->urlLink = "/".CORE_IMAGE."avatar-male.png";
+                else $this->urlLink = "/".CORE_IMAGE."avatar-female.png";
             }
             else
             {

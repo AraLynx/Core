@@ -171,18 +171,18 @@ class PrintOut
                         $this->headerHtml .= "<div class='logo_left'>";
                             if($type == "old")
                             {
-                                $this->headerHtml .= "<img class='logo_image' src='/".COMMON_IMAGE."company/old_{$this->companyId}.png'/>";
+                                $this->headerHtml .= "<img class='logo_image' src='/".CORE_IMAGE."company/old_{$this->companyId}.png'/>";
                             }
                             else if($type == "new")
                             {
-                                $this->headerHtml .= "<img class='logo_image' src='/".COMMON_IMAGE."company/new_{$this->companyId}.png'/>";
+                                $this->headerHtml .= "<img class='logo_image' src='/".CORE_IMAGE."company/new_{$this->companyId}.png'/>";
                             }
                         $this->headerHtml .="</div>";
 
                         $this->headerHtml .= "<div class='logo_right'>";
                             if($isShowBrand)
                             {
-                                $this->headerHtml .= "<img class='logo_image' src='/".COMMON_IMAGE."brand/{$this->brandId}.png'/>";
+                                $this->headerHtml .= "<img class='logo_image' src='/".CORE_IMAGE."brand/{$this->brandId}.png'/>";
                             }
                         $this->headerHtml .="</div>";
                     $this->headerHtml .= "</div>";

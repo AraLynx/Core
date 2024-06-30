@@ -98,7 +98,7 @@
             <div class='d-flex justify-content-center mt-5'>
                 <div>
                     <div class='text-center h3 text-warning'><span id='reportUnderDevelopmentTitle'></span> IS UNDER CONSTRUCTION</div>
-                    <img class='text-center' src='/".COMMON_IMAGE."under_construction_001.jpg'/>
+                    <img class='text-center' src='/".CORE_IMAGE."under_construction_001.jpg'/>
                 </div>
             </div>
         </div>";

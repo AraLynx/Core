@@ -9,8 +9,8 @@
                     <i class="fa-solid fa-bars text-white"></i>
                 </button>
             </div>
-            <a class="navbar-brand p-0 me-0 me-lg-2" href="/<?php echo ROOT;?>">
-                <img class="navbar-text" src="/<?php echo COMMON_IMAGE;?>Logo_<?php echo strtoupper(APP_NAME);?>_100White.png" alt="Logo"/>
+            <a class="navbar-brand p-0 me-0 me-lg-2" href="/<?php echo APP_ROOT;?>">
+                <img class="navbar-text" src="/<?php echo CORE_IMAGE;?>Logo_<?php echo strtoupper(APP_NAME);?>_100White.png" alt="Logo"/>
             </a>
             <?php
             if(APP_NAME == "Hephaestus")
@@ -38,7 +38,7 @@
                         <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav d-none d-lg-block">
                             <li class="nav-item col-6 col-lg-auto">
                                 <div class="py-2 px-0 px-lg-2">
-                                    <a class="nav-link active p-0" aria-current="true" href="/<?php echo ROOT;?>">
+                                    <a class="nav-link active p-0" aria-current="true" href="/<?php echo APP_ROOT;?>">
                                         <?php
                                             echo APP_NAME;
                                             if(APP_NAME == "Plutus") echo " {$_BRANCH->BrandName}";
@@ -68,14 +68,14 @@
 
                         <ul class="navbar-nav flex-row align-items-center flex-wrap ms-md-auto">
                         <li class="nav-item d-none d-lg-block">
-                            <a class="nav-link py-2 px-0 px-lg-2 position-relative" role="button" href="/<?php echo ROOT;?>notification">
+                            <a class="nav-link py-2 px-0 px-lg-2 position-relative" role="button" href="/<?php echo APP_ROOT;?>notification">
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger workerNotification"></span>
                                 <i class='fa-solid fa-bell text-white'></i>
                                 <small class="d-lg-none ms-2 text-white">Notification</small>
                             </a>
                         </li>
                         <li class="nav-item col-12 col-lg-auto mb-lg-0 mb-3">
-                            <a class="nav-link py-2 px-0 px-lg-2" role="button" href="/<?php echo ROOT;?>profile">
+                            <a class="nav-link py-2 px-0 px-lg-2" role="button" href="/<?php echo APP_ROOT;?>profile">
                                 <?php
                                     $params = [
                                         "page" => "default",
@@ -93,14 +93,14 @@
                             </a>
                         </li>
                         <li class="nav-item col-6 col-lg-auto d-lg-none">
-                            <a class="nav-link py-2 px-0 px-lg-2 position-relative" role="button" href="/<?php echo ROOT;?>approval">
+                            <a class="nav-link py-2 px-0 px-lg-2 position-relative" role="button" href="/<?php echo APP_ROOT;?>approval">
                                 <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger unreadEmailCounter"></span>
                                 <i class='fa-regular fa-fw fa-envelope'></i>
                                 <small class="d-lg-none ms-2 text-white">Message</small>
                             </a>
                         </li>
                         <li class="nav-item col-6 col-lg-auto d-lg-none">
-                            <a class="nav-link py-2 px-0 px-lg-2 position-relative" role="button" href="/<?php echo ROOT;?>approval">
+                            <a class="nav-link py-2 px-0 px-lg-2 position-relative" role="button" href="/<?php echo APP_ROOT;?>approval">
                                 <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger approvalWMAPCounter"></span>
                                 <i class='fa-regular fa-fw fa-thumbs-up'></i>
                                 <small class="d-lg-none ms-2 text-white">Approval</small>
@@ -117,13 +117,13 @@
         <nav aria-label="breadcrumb" class="container-xxl">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a role="button" onClick="TDE.sidebar.toggle();" title="Sidebar Menu"><i class="fa-solid fa-bars"></i></a></li>
-                <li class="breadcrumb-item"><a href="/<?php echo ROOT;?>">Home</a></li>
+                <li class="breadcrumb-item"><a href="/<?php echo APP_ROOT;?>">Home</a></li>
                 <?php
                 if(isset($breadcrumbs))
                 {
                     foreach($breadcrumbs AS $index => $breadcrumb)
                     {
-                        echo "<li class='breadcrumb-item'><a href='/".ROOT."{$breadcrumb[1]}'>$breadcrumb[0]</a></li>";
+                        echo "<li class='breadcrumb-item'><a href='/".APP_ROOT."{$breadcrumb[1]}'>$breadcrumb[0]</a></li>";
                     }
                 }
                 ?>

@@ -8,14 +8,14 @@ class DefaultController extends Controller
     public function __construct()
     {
         parent::__construct();
-        $this->setIsContentChronos(true);
+        $this->setIsContentCore(true);
     }
 
     public function blank()
     {
         $this->setPageTitle("Tri Mandiri Group");
-        $this->setJS(["chronos"]);
-        $this->setCSS(["chronos"]);
+        $this->setJS(["blank"]);
+        $this->setCSS(["blank"]);
         $this->setLayout("blank");
         $this->setViewFolderName('default');
         return $this->render('home');

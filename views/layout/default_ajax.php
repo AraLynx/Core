@@ -1,4 +1,4 @@
-<script src="/<?php echo COMMON_JS;?>default_ajax.js" defer></script>
+<script src="/<?php echo CORE_JS;?>default_ajax.js" defer></script>
 <?php
 $modalParams = array(
     "page" => "default",

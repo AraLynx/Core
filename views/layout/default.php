@@ -7,37 +7,37 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
 
-        <link rel="shortcut icon" href="/<?php echo COMMON_IMAGE;?>Logo_<?php echo strtoupper(APP_NAME);?>_16.png" type="image/png">
+        <link rel="shortcut icon" href="/<?php echo CORE_IMAGE;?>Logo_<?php echo strtoupper(APP_NAME);?>_16.png" type="image/png">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" type="text/css" href="/<?php echo COMMON_CSS;?>bootstrap.tde.min.css">
+        <link rel="stylesheet" type="text/css" href="/<?php echo CORE_CSS;?>bootstrap.tde.min.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" type="text/css" href="/<?php echo COMMON_CSS;?>index.css">
-        <link rel="stylesheet" type="text/css" href="/<?php echo COMMON_CSS;?>color.css">
-        <link rel="stylesheet" type="text/css" href="/<?php echo COMMON_CSS;?>default.css">
+        <link rel="stylesheet" type="text/css" href="/<?php echo CORE_CSS;?>index.css">
+        <link rel="stylesheet" type="text/css" href="/<?php echo CORE_CSS;?>color.css">
+        <link rel="stylesheet" type="text/css" href="/<?php echo CORE_CSS;?>default.css">
 
         <!-- Kendo CSS -->
-        <link rel="stylesheet" type="text/css" href="/<?php echo KENDOUI_ROOT;?>css/kendo.bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="/<?php echo KENDOUI_ROOT;?>css/kendo.common-bootstrap.min.css">
-        <!--<link rel="stylesheet" type="text/css" href="/<?php echo KENDOUI_ROOT;?>css/kendo.dataviz.min.css">-->
-        <!--<link rel="stylesheet" type="text/css" href="/<?php echo KENDOUI_ROOT;?>css/kendo.dataviz.bootstrap.min.css">-->
+        <link rel="stylesheet" type="text/css" href="/<?php echo KENDOUI_DIR;?>css/kendo.bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/<?php echo KENDOUI_DIR;?>css/kendo.common-bootstrap.min.css">
+        <!--<link rel="stylesheet" type="text/css" href="/<?php echo KENDOUI_DIR;?>css/kendo.dataviz.min.css">-->
+        <!--<link rel="stylesheet" type="text/css" href="/<?php echo KENDOUI_DIR;?>css/kendo.dataviz.bootstrap.min.css">-->
 
         <!-- Font Awesome CSS -->
-        <link href="/<?php echo FONTAWESOME_ROOT;?>css/all.css" rel="stylesheet">
+        <link href="/<?php echo FONTAWESOME_DIR;?>css/all.css" rel="stylesheet">
 
         {{dynamic_css}}
 
         <!-- JAVASCRIPT -->
-        <script src="/<?php echo KENDOUI_ROOT;?>js/jquery.min.js"></script>
+        <script src="/<?php echo KENDOUI_DIR;?>js/jquery.min.js"></script>
 
         <!-- Bootstrap JS -->
-        <script src="/<?php echo BOOTSTRAP_ROOT;?>js/bootstrap.bundle.min.js" defer></script>
+        <script src="/<?php echo BOOTSTRAP_DIR;?>js/bootstrap.bundle.min.js" defer></script>
 
         <!-- Kendo JS -->
-        <script src="/<?php echo KENDOUI_ROOT;?>js/kendo.all.min.js" defer></script>
-        <!--<script src="/<?php echo KENDOUI_ROOT;?>js/kendo.dataviz.min.js" defer></script>-->
-        <script src="/<?php echo KENDOUI_ROOT;?>js/jszip.min.js" defer></script>
+        <script src="/<?php echo KENDOUI_DIR;?>js/kendo.all.min.js" defer></script>
+        <!--<script src="/<?php echo KENDOUI_DIR;?>js/kendo.dataviz.min.js" defer></script>-->
+        <script src="/<?php echo KENDOUI_DIR;?>js/jszip.min.js" defer></script>
 
         <title>{{page_title}}</title>
         <?php
@@ -46,16 +46,16 @@
             {
                 if($file && $file != "." && $file != "..")
                 {
-                    echo "<audio id='audio_{$file}' src='/".COMMON_AUDIO."notifications/{$file}'></audio>";
+                    echo "<audio id='audio_{$file}' src='/".CORE_AUDIO."notifications/{$file}'></audio>";
                 }
             }
         ?>
 
         <script>
-            const ROOT = '<?php echo ROOT;?>';
+            const APP_ROOT = '<?php echo APP_ROOT;?>';
 
-            const COMMON_AJAX = '<?php echo COMMON_AJAX;?>';
-            const COMMON_AUDIO = '<?php echo COMMON_AUDIO;?>';
+            const CORE_AJAX = '<?php echo CORE_AJAX;?>';
+            const CORE_AUDIO = '<?php echo CORE_AUDIO;?>';
 
             const AJAX_ROOT = '<?php echo AJAX_ROOT;?>';
             const IMAGE_ROOT = '<?php echo IMAGE_ROOT;?>';
@@ -64,8 +64,8 @@
             const USER_ID = <?php echo $_EMPLOYEE["UserId"];?>;
             const ENVIRONMENT = '<?php echo $_ENVIRONMENT;?>';
         </script>
-        <script src="/<?php echo COMMON_JS;?>index.js"></script>
-        <script src="/<?php echo COMMON_JS;?>default.js"></script>
+        <script src="/<?php echo CORE_JS;?>index.js"></script>
+        <script src="/<?php echo CORE_JS;?>default.js"></script>
 
         <?php
             echo "

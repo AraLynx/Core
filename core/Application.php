@@ -31,9 +31,9 @@ class Application
 
     protected int|array $backDate = 0;
 
-    public function __construct(string $rootPath, array $params)
+    public function __construct(string $rootDir, array $params)
     {
-        self::$ROOT_DIR = $rootPath;
+        self::$ROOT_DIR = $rootDir;
         self::$app = $this;
 
         $this->request = new Request();

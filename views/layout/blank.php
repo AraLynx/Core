@@ -7,20 +7,20 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
 
-        <link rel="shortcut icon" href="/<?php echo COMMON_IMAGE;?>home/Logo16.png" type="image/png">
+        <link rel="shortcut icon" href="/<?php echo CORE_IMAGE;?>home/Logo16.png" type="image/png">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" type="text/css" href="/<?php echo COMMON_CSS;?>index.css">
+        <link rel="stylesheet" type="text/css" href="/<?php echo CORE_CSS;?>index.css">
 
         {{dynamic_css}}
 
         <!-- JAVASCRIPT -->
-        <script src="/<?php echo KENDOUI_ROOT;?>js/jquery.min.js"></script>
+        <script src="/<?php echo KENDOUI_DIR;?>js/jquery.min.js"></script>
 
         <title>{{page_title}}</title>
         <script>
         </script>
-        <script src="/<?php echo COMMON_JS;?>index.js"></script>
+        <script src="/<?php echo CORE_JS;?>index.js"></script>
     </head>
 
     <body class="d-none">

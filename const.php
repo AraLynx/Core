@@ -14,7 +14,7 @@ define("DIR_FOR_JS","/AraCore");
 define("ASSET_DIR",DIR."/Archives/Asset/");
 define("TEMP_DIR",DIR."/Archives/Temp/");
 
-define("CORE_DIR",DIR."/Chronos/");
+define("CORE_DIR",DIR."/Core/");
     define("CORE_RESOURCE",CORE_DIR."resources/");
         define("BOOTSTRAP_DIR",CORE_RESOURCE."bootstrap5.2.0/");
         define("KENDOUI_DIR",CORE_RESOURCE."telerik2022.1.301/");
@@ -24,15 +24,15 @@ define("CORE_DIR",DIR."/Chronos/");
         define("CORE_JS",CORE_RESOURCE."js/");
         define("CORE_IMAGE",CORE_RESOURCE."images/");
         define("CORE_AUDIO",CORE_RESOURCE."audios/");
-    define("CORE_AJAX",CORE_DIR."ajax/");
+        define("CORE_AJAX",CORE_DIR."ajax/");
 
-define("ROOT",DIR."/".APP_NAME."/");
-    define("RESOURCE_DIR",ROOT."resources/");
-        define("JS_DIR",RESOURCE_DIR."js/");
+define("APP_ROOT",DIR."/".APP_NAME."/");
+    define("RESOURCE_DIR",APP_ROOT."resources/");
         define("CSS_DIR",RESOURCE_DIR."css/");
+        define("JS_DIR",RESOURCE_DIR."js/");
         define("IMAGE_DIR", RESOURCE_DIR."images/");
         define("AUDIO_DIR", RESOURCE_DIR."audios/");
 
-    define("AJAX_DIR", ROOT."ajax/");
-    define("CACHE_DIR", ROOT."cache/");
+    define("AJAX_DIR", APP_ROOT."ajax/");
+    define("CACHE_DIR", APP_ROOT."cache/");
 

@@ -67,9 +67,9 @@ class Router
             }
 
             ob_start();
-            if(Application::$app->controller->getIsLayoutChronos())
+            if(Application::$app->controller->getIsLayoutCore())
             {
-                include_once Application::$ROOT_DIR."/../Chronos/views/layout/{$layout}.php";
+                include_once Application::$ROOT_DIR."/../Core/views/layout/{$layout}.php";
             }
             else
             {
@@ -88,11 +88,12 @@ class Router
             {
                 $$key = $value;
             }
+            //dd(Application::$ROOT_DIR."/../Core/views/{$viewFolderName}/{$content}.php");
 
             ob_start();
-            if(Application::$app->controller->getIsContentChronos())
+            if(Application::$app->controller->getIsContentCore())
             {
-                include_once Application::$ROOT_DIR."/../Chronos/views/{$viewFolderName}/{$content}.php";
+                include_once Application::$ROOT_DIR."/../Core/views/{$viewFolderName}/{$content}.php";
             }
             else
             {
@@ -123,13 +124,13 @@ class Router
                 }
                 else
                 {
-                    if(Application::$app->controller->getIsContentChronos())
+                    if(Application::$app->controller->getIsContentCore())
                     {
-                        $filePath = "/".COMMON_JS."".$value.".js";
+                        $filePath = "/".CORE_JS."".$value.".js";
                     }
                     else
                     {
-                        $filePath = "/".JS_ROOT."".$value.".js";
+                        $filePath = "/".JS_DIR."".$value.".js";
                     }
 
                     $jsText .="<script src='".$this->getVer($filePath)."'></script>";
@@ -138,9 +139,9 @@ class Router
 
             return $jsText;
         }
-        protected function getChronosJS()
+        protected function getCoreJS()
         {
-            $js = Application::$app->controller->getChronosJS();
+            $js = Application::$app->controller->getCoreJS();
             $jsText = "";
 
             foreach($js as $value)
@@ -151,7 +152,7 @@ class Router
                 }
                 else
                 {
-                    $filePath = "/".COMMON_JS."".$value.".js";
+                    $filePath = "/".CORE_JS."".$value.".js";
                     $jsText .="<script src='".$this->getVer($filePath)."'></script>";
                 }
             }
@@ -171,13 +172,13 @@ class Router
                 }
                 else
                 {
-                    if(Application::$app->controller->getIsContentChronos())
+                    if(Application::$app->controller->getIsContentCore())
                     {
-                        $filePath = "/".COMMON_CSS."".$value.".css";
+                        $filePath = "/".CORE_CSS."".$value.".css";
                     }
                     else
                     {
-                        $filePath = "/".CSS_ROOT."".$value.".css";
+                        $filePath = "/".CSS_DIR."".$value.".css";
                     }
 
                     $cssText .="<link rel='stylesheet' type='text/css' href='".$this->getVer($filePath)."'>";
@@ -186,9 +187,9 @@ class Router
 
             return $cssText;
         }
-        protected function getChronosCSS()
+        protected function getCoreCSS()
         {
-            $css = Application::$app->controller->getChronosCSS();
+            $css = Application::$app->controller->getCoreCSS();
             $cssText = "";
             foreach($css as $key => $value)
             {
@@ -196,7 +197,7 @@ class Router
                     $cssText .="<link rel='stylesheet' type='text/css' href='".$value."'>";
                 else
                 {
-                    $filePath = "/".COMMON_CSS."".$value.".css";
+                    $filePath = "/".CORE_CSS."".$value.".css";
                     $cssText .="<link rel='stylesheet' type='text/css' href='".$this->getVer($filePath)."'>";
                 }
             }
@@ -224,8 +225,8 @@ class Router
             {
                 $this->response->setStatusCode(404);
                 Application::$app->controller = new Controller();
-                Application::$app->controller->setIsLayoutChronos(true);
-                Application::$app->controller->setIsContentChronos(true);
+                Application::$app->controller->setIsLayoutCore(true);
+                Application::$app->controller->setIsContentCore(true);
                 Application::$app->controller->setLayout("auth");
                 Application::$app->controller->setPageTitle("Ooops!");
                 //Application::$app->controller->setJS(["_404"]);
@@ -252,29 +253,16 @@ class Router
             $this->renderParams = array_merge($this->renderParams, $params);
 
             $layout = $this->getLayout($this->renderParams);
-
             $content = $this->getContent($content, $this->renderParams);
+
             $renderedView = str_replace('{{content}}',$content,$layout);
 
             $pageTitle = $this->getPageTitle();
             if($pageTitle)$renderedView = str_replace('{{page_title}}',$pageTitle,$renderedView);
             else $renderedView = str_replace('{{page_title}}',"",$renderedView);
 
-            /*
-            $js = $this->getJS();
-            if($js)$renderedView = str_replace('{{dynamic_js}}',$js,$renderedView);
-            else $renderedView = str_replace('{{dynamic_js}}',"",$renderedView);
-            */
-            $renderedView = str_replace('{{dynamic_js}}',$this->getChronosJS().$this->getJS(),$renderedView);
-
-            /*
-            $css = $this->getCSS();
-            $chronosCss = $this->getChronosCSS();
-            if($css)$renderedView = str_replace('{{dynamic_css}}',$css,$renderedView);
-            else $renderedView = str_replace('{{dynamic_css}}',"",$renderedView);
-            */
-            $renderedView = str_replace('{{dynamic_css}}',$this->getChronosCSS().$this->getCSS(),$renderedView);
-
+            $renderedView = str_replace('{{dynamic_js}}',$this->getCoreJS().$this->getJS(),$renderedView);
+            $renderedView = str_replace('{{dynamic_css}}',$this->getCoreCSS().$this->getCSS(),$renderedView);
             return $renderedView;
         }
     #endregion data process

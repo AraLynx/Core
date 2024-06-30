@@ -9,7 +9,7 @@ class KendoWindow extends Page
     protected string $width;
     protected string $maxWidth;
     protected string $height;
-    protected string $maxheight;
+    protected string $maxHeight;
     protected string $visible;
     protected bool $pinned;
 

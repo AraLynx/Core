@@ -939,12 +939,12 @@ class Form extends Page
 
                                                 $js .= "TDE.{$inputElementId} = $('#{$inputElementId}').kendoEditor({
                                                     stylesheets: [
-                                                        '/".COMMON_CSS."bootstrap.tde.min.css',
-                                                        '/".COMMON_CSS."index.css',
-                                                        '/".COMMON_CSS."color.css',
-                                                        '/".KENDOUI_ROOT."css/kendo.bootstrap.min.css',
-                                                        '/".KENDOUI_ROOT."css/kendo.common-bootstrap.min.css',
-                                                        '/".FONTAWESOME_ROOT."css/all.css'
+                                                        '/".CORE_CSS."bootstrap.tde.min.css',
+                                                        '/".CORE_CSS."index.css',
+                                                        '/".CORE_CSS."color.css',
+                                                        '/".KENDOUI_DIR."css/kendo.bootstrap.min.css',
+                                                        '/".KENDOUI_DIR."css/kendo.common-bootstrap.min.css',
+                                                        '/".FONTAWESOME_DIR."css/all.css'
                                                     ]
                                                     ,tools: [
                                                         'bold','italic','underline',

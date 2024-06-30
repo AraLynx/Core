@@ -100,7 +100,7 @@ $form->render();
                 { ?>
                     <li class="py-2 p-lg-0">
                         <a class="d-flex align-items-center text-reset text-decoration-none" role="button" href="/<?php echo TDE_ROOT;?>/Gaia/">
-                            <img src="/<?php echo COMMON_IMAGE;?>/Logo_GAIA_16.png" class=""/>
+                            <img src="/<?php echo CORE_IMAGE;?>/Logo_GAIA_16.png" class=""/>
                             <div class="d-lg-block d-none ms-lg-2">GAIA</div>
                         </a>
                     </li>
@@ -109,7 +109,7 @@ $form->render();
                 { ?>
                     <li class="py-2 p-lg-0">
                         <a class="d-flex align-items-center text-reset text-decoration-none" role="button" href="/<?php echo TDE_ROOT;?>/Selene/">
-                            <img src="/<?php echo COMMON_IMAGE;?>/Logo_SELENE_16.png" class=""/>
+                            <img src="/<?php echo CORE_IMAGE;?>/Logo_SELENE_16.png" class=""/>
                             <div class="d-lg-block d-none ms-lg-2">SELENE</div>
                         </a>
                     </li>
@@ -118,7 +118,7 @@ $form->render();
                 { ?>
                     <li class="py-2 p-lg-0">
                         <a class="d-flex align-items-center text-reset text-decoration-none" role="button" href="/<?php echo TDE_ROOT;?>/Plutus/">
-                            <img src="/<?php echo COMMON_IMAGE;?>/Logo_PLUTUS_16.png" class=""/>
+                            <img src="/<?php echo CORE_IMAGE;?>/Logo_PLUTUS_16.png" class=""/>
                             <div class="d-lg-block d-none ms-lg-2">PLUTUS</div>
                         </a>
                     </li>

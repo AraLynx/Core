@@ -5,7 +5,7 @@ unset($_SESSION[APP_NAME]);
 <div id="_401" class="d-flex align-items-center justify-content-center vh-100">
     <div class="text-center row">
         <div class="col-md-6">
-            <img src="/<?php echo COMMON_IMAGE;?>404/security_breach.png" alt="" class="img-fluid">
+            <img src="/<?php echo CORE_IMAGE;?>404/security_breach.png" alt="" class="img-fluid">
         </div>
         <div class="col-md-6 mt-5">
             <p class="fs-3">

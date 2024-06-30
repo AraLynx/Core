@@ -1,4 +1,4 @@
-const linkAjax = "/"+COMMON_AJAX+"report/";
+const linkAjax = "/"+CORE_AJAX+"report/";
 
 const reportIdHasVehicleGroups = [10,24,25,26,27,28,29,31];
 const reportIdHasVehicleTypes = [10,24,25,26,27,28,29,31];

@@ -4,14 +4,14 @@ namespace app\core;
 class Controller
 {
     protected Application $app;
-    protected bool $isLayoutChronos = true;
-    protected bool $isContentChronos = false;
+    protected bool $isLayoutCore = true;
+    protected bool $isContentCore = false;
     public string $layout;
     public string $viewFolderName;
     public array $js = [];
     public array $css = [];
-    public array $chronosJs = [];
-    public array $chronosCss = [];
+    public array $coreJs = [];
+    public array $coreCss = [];
     public string $pageTitle = 'Welcome to TDE 2.0';
     protected int $pageId = 0;
     protected array $breadcrumbs = [];
@@ -19,8 +19,8 @@ class Controller
     public function __construct()
     {
         $this->app = Application::$app;
-        $this->setIsLayoutChronos(true);
-        $this->setIsContentChronos(false);
+        $this->setIsLayoutCore(true);
+        $this->setIsContentCore(false);
         $this->setLayout('default');
     }
 
@@ -31,13 +31,13 @@ class Controller
     #endregion
 
     #region setting variable
-        public function setIsLayoutChronos(bool $isChronos)
+        public function setIsLayoutCore(bool $isCore)
         {
-            $this->isLayoutChronos = $isChronos;
+            $this->isLayoutCore = $isCore;
         }
-        public function setIsContentChronos(bool $isChronos)
+        public function setIsContentCore(bool $isCore)
         {
-            $this->isContentChronos = $isChronos;
+            $this->isContentCore = $isCore;
         }
         public function setLayout(string $layout)
         {
@@ -60,24 +60,24 @@ class Controller
         {
             $this->css = $css;
         }
-        public function setChronosJS(array $js)
+        public function setCoreJS(array $js)
         {
-            $this->chronosJs = $js;
+            $this->coreJs = $js;
         }
-        public function setChronosCSS(array $css)
+        public function setCoreCSS(array $css)
         {
-            $this->chronosCss = $css;
+            $this->coreCss = $css;
         }
     #endregion setting variable
 
     #region getting / returning variable
-        public function getIsLayoutChronos()
+        public function getIsLayoutCore()
         {
-            return $this->isLayoutChronos;
+            return $this->isLayoutCore;
         }
-        public function getIsContentChronos()
+        public function getIsContentCore()
         {
-            return $this->isContentChronos;
+            return $this->isContentCore;
         }
         protected function generateNewsImagePositionOptions()
         {
@@ -99,13 +99,13 @@ class Controller
         {
             return $this->css;
         }
-        public function getChronosJS()
+        public function getCoreJS()
         {
-            return $this->chronosJs;
+            return $this->coreJs;
         }
-        public function getChronosCSS()
+        public function getCoreCSS()
         {
-            return $this->chronosCss;
+            return $this->coreCss;
         }
     #endregion  getting / returning variable
 
@@ -135,7 +135,7 @@ class Controller
         }
         protected function tokenExpired()
         {
-            $this->setIsContentChronos(true);
+            $this->setIsContentCore(true);
             $this->setPageTitle('SESSION EXPIRED');
             $this->setLayout('print');
             $this->setViewFolderName('auth');

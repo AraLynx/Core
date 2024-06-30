@@ -1,5 +1,5 @@
 
-<script src="/<?php echo COMMON_JS;?>default_changeLog.js" defer></script>
+<script src="/<?php echo CORE_JS;?>default_changeLog.js" defer></script>
 <?php
 $title = "Change Log";
 $body = "Information goes here";

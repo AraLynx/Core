@@ -1,1 +1,1 @@
-const linkDefaultAjax = "/"+COMMON_AJAX+"default/";
+const linkDefaultAjax = "/"+CORE_AJAX+"default/";

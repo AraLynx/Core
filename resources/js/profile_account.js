@@ -28,7 +28,7 @@ function accountEditSettingNotificationSoundChange(e){
 function accountEditSettingTestSound(){
     if(TDE.accountEditSettingNotificationSound.select() != -1){
         let audioFile = TDE.accountEditSettingNotificationSound.value();
-        //let audioObj = new Audio("/"+COMMON_AUDIO+"notifications/"+audioFile);
+        //let audioObj = new Audio("/"+CORE_AUDIO+"notifications/"+audioFile);
         //audioObj.play();
         document.getElementById("audio_"+audioFile).play();
     }

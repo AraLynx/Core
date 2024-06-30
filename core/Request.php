@@ -39,8 +39,8 @@ class Request
     #region getting / returning variable
         public function getPath()
         {
-            $path = str_replace(strtolower(ROOT),"",strtolower($_SERVER['REQUEST_URI'])) ?? '/';
-            //echo "<pre>";var_dump(ROOT);echo "</pre>";
+            $path = str_replace(strtolower(APP_ROOT),"",strtolower($_SERVER['REQUEST_URI'])) ?? '/';
+            //echo "<pre>";var_dump(APP_ROOT);echo "</pre>";
 
             if(str_contains($path,"?"))
             {

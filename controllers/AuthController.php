@@ -7,8 +7,8 @@ class AuthController extends Controller
     public function __construct()
     {
         parent::__construct();
-        $this->setIsLayoutChronos(true);
-        $this->setIsContentChronos(true);
+        $this->setIsLayoutCore(true);
+        $this->setIsContentCore(true);
         $this->setLayout('auth');
     }
 
@@ -34,11 +34,11 @@ class AuthController extends Controller
     {
         $this->setJS(['login']);
         $this->setCSS(['login']);
-        $this->setPageTitle('Login');
+        $this->setPageTitle('Wallet Login');
 
         return $this->render('login');
     }
-
+    /*
     public function loginBranch()
     {
         $this->setJS(['loginBranch']);
@@ -83,4 +83,5 @@ class AuthController extends Controller
 
             return $users[0];
         }
+    */
 }

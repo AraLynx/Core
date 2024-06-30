@@ -1,4 +1,4 @@
-const linkAjax = "/"+COMMON_AJAX+"profile/";
+const linkAjax = "/"+CORE_AJAX+"profile/";
 //alert("JS LOADED");
 let isAttendanceData = false;
 let isTeamAttendanceData = false;

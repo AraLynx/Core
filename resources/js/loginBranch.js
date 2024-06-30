@@ -1,4 +1,4 @@
-const linkAjax = "/"+COMMON_AJAX+"login/";
+const linkAjax = "/"+CORE_AJAX+"login/";
 
 $(document).ready(function(){
     //alert("JS LOADED");

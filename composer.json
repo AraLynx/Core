@@ -1,5 +1,5 @@
 {
-    "name": "aracore/mvc-sample",
+    "name": "aralynx/core",
     "autoload": {
         "psr-4": {
             "app\\":"./"

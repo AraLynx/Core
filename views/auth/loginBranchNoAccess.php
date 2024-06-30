@@ -8,7 +8,7 @@ $formParams = array(
     "ajaxJSUrl" => "linkDefaultAjax+'defaultLogout",
     "submitButtonColor" => "danger",
     "submitFontAwesomeIcon" => "fa-solid fa-arrow-right-from-bracket",
-    "ajaxJSUrl" => "'/".COMMON_AJAX."default/defaultLogout",
+    "ajaxJSUrl" => "'/".CORE_AJAX."default/defaultLogout",
     "submitText" => "LOGOUT"
 );
 $form = new \app\pages\Form($formParams);
@@ -25,8 +25,8 @@ $logoutFunctionName = $form->getSubmitDefaultFunctionName();
         <div class="col-lg-4 col-12">
             <div id="login-left">
                 <div class="login-logo">
-                    <a href="/<?php echo ROOT;?>">
-                        <img src="/<?php echo COMMON_IMAGE;?>Logo_<?php echo strtoupper(APP_NAME);?>_100.png" alt="Logo">
+                    <a href="/<?php echo DIR;?>">
+                        <img src="/<?php echo CORE_IMAGE;?>Logo_<?php echo strtoupper(APP_NAME);?>_100.png" alt="Logo">
                     </a>
                     <span class="login-title"><?php echo APP_NAME;?></span>
                 </div>

@@ -1,6 +1,6 @@
 /*FIND + REPLACE page -> actual_appAccess*/
 //alert("JS LOADED");
-const linkAjax = "/"+COMMON_AJAX+"appAccess/";
+const linkAjax = "/"+CORE_AJAX+"appAccess/";
 
 $(document).ready(function(){
 });

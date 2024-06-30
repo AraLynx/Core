@@ -1,4 +1,4 @@
-<script src="/<?php echo COMMON_JS;?>default_logOut.js" defer></script>
+<script src="/<?php echo CORE_JS;?>default_logOut.js" defer></script>
 <?php
 $formParams = array(
     "page" => "default",

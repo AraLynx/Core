@@ -1,9 +1,9 @@
-<script src="/<?php echo COMMON_JS;?>default_sidebar.js" defer></script>
+<script src="/<?php echo CORE_JS;?>default_sidebar.js" defer></script>
 <?php
 ?>
 <div id="sidebar" class="offcanvas offcanvas-start bg-dark" tabindex="-1" aria-labelledby="sidebarLabel">
     <div class="offcanvas-header">
-        <img src="/<?php echo COMMON_IMAGE;?>Logo_<?php echo strtoupper(APP_NAME);?>_100White.png" alt="Logo" style="height:25px;"/>
+        <img src="/<?php echo CORE_IMAGE;?>Logo_<?php echo strtoupper(APP_NAME);?>_100White.png" alt="Logo" style="height:25px;"/>
         <h5 class="offcanvas-title text-light text-center" id="sidebarLabel">
             <?php echo APP_NAME;?> Pages
         </h5>
@@ -36,7 +36,7 @@
                     }
 
                     $PageRouteName = $modulePage["PageRouteName"] ? $modulePage["PageRouteName"] : "p{$modulePage["PageId"]}";
-                    echo "<a class='d-flex align-items-center ms-4 text-light' role='button' href='/".ROOT."{$modulePage["ModuleRouteName"]}/{$PageRouteName}'>";
+                    echo "<a class='d-flex align-items-center ms-4 text-light' role='button' href='/".APP_ROOT."{$modulePage["ModuleRouteName"]}/{$PageRouteName}'>";
                         echo "<img class='page-image me-2 mb-1' src='/".IMAGE_ROOT."page/{$modulePage['PageImage']}'/>";
                         echo "<p>{$modulePage['PageName']}</p>";
                     echo "</a>";
@@ -47,7 +47,7 @@
             if($_IS_REPORT_ACCESS)
             { ?>
                 <hr class='text-light m-1'/>
-                <a class="d-flex align-items-center text-light" role="button" href='/<?php echo ROOT;?>report'>
+                <a class="d-flex align-items-center text-light" role="button" href='/<?php echo APP_ROOT;?>report'>
                     <i class='fa-solid fa-chart-line fa-fw pe-4'></i>
                     <p>REPORT</p>
                 </a>
@@ -64,7 +64,7 @@
             if(APP_NAME != "Gaia")
             { ?>
                 <a class="d-flex align-items-center text-light" role="button" href="/<?php echo TDE_ROOT;?>/Gaia/">
-                    <img src="/<?php echo COMMON_IMAGE;?>Logo_GAIA_16.png" class="pe-1"/>
+                    <img src="/<?php echo CORE_IMAGE;?>Logo_GAIA_16.png" class="pe-1"/>
                     <p>GAIA</p>
                 </a>
             <?php }
@@ -72,7 +72,7 @@
             if(APP_NAME != "Selene")
             { ?>
                 <a class="d-flex align-items-center text-light" role="button" href="/<?php echo TDE_ROOT;?>/Selene/">
-                    <img src="/<?php echo COMMON_IMAGE;?>Logo_SELENE_16.png" class="pe-1"/>
+                    <img src="/<?php echo CORE_IMAGE;?>Logo_SELENE_16.png" class="pe-1"/>
                     <p>SELENE</p>
                 </a>
             <?php }
@@ -80,7 +80,7 @@
             if(APP_NAME != "Plutus")
             { ?>
                 <a class="d-flex align-items-center text-light" role="button" href="/<?php echo TDE_ROOT;?>/Plutus/">
-                    <img src="/<?php echo COMMON_IMAGE;?>Logo_PLUTUS_16.png" class="pe-1"/>
+                    <img src="/<?php echo CORE_IMAGE;?>Logo_PLUTUS_16.png" class="pe-1"/>
                     <p>PLUTUS</p>
                 </a>
             <?php }
