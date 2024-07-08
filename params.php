@@ -8,9 +8,9 @@ define("PARAMS",[
             "aracore" => [
                 "type" => $_ENV["ARACORE_DB_TYPE"],
                 "host" => $_ENV["ARACORE_DB_HOST"],
-                "name" => $_ENV["ARACORE_DB_NAME"],
-                "user" => $_ENV["ARACORE_DB_USER"],
-                "password" => $_ENV["ARACORE_DB_PASSWORD"],
+                "name" => $_ENV["CORE_DB_NAME"],
+                "user" => $_ENV["CORE_DB_USER"],
+                "password" => $_ENV["CORE_DB_PASSWORD"],
             ],
             /*
             "gaia" => [
