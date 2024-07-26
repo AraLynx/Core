@@ -131,7 +131,7 @@ class UranusUser_DetailRecord extends Record
             ],
             "size" => $params["size"] ?? 50
         );
-        $avatar = new \app\pages\Avatar($avatarParams);
+        $avatar = new \app\components\Avatar($avatarParams);
         $avatar->begin();
         $avatar->end();
 

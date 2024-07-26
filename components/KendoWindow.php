@@ -1,8 +1,8 @@
 <?php
-namespace app\pages;
-use app\core\Page;
+namespace app\components;
+use app\core\Component;
 
-class KendoWindow extends Page
+class KendoWindow extends Component
 {
     protected string $title;
     protected string $body;

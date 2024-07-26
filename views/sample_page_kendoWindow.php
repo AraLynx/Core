@@ -6,7 +6,7 @@ $windowParams = array(
     ,"title" => "SOME TITLE"
     ,"body" => "SOME BODY"
 );
-$window = new \app\pages\KendoWindow($windowParams);
+$window = new \app\components\KendoWindow($windowParams);
 $window->begin();
 $window->end();
 $window->render();

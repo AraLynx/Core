@@ -1,8 +1,8 @@
 <?php
-namespace app\pages;
-use app\core\Page;
+namespace app\components;
+use app\core\Component;
 
-class Avatar extends Page
+class Avatar extends Component
 {
     protected string $urlLink;
     protected int $size;

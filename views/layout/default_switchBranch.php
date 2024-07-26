@@ -14,7 +14,7 @@ $formParams = array(
     "submitText" => "SWITCH BRANCH",
     "ajaxJSUrl" => "'/".CORE_AJAX."login/loginBranchLogin",
 );
-$form = new \app\pages\Form($formParams);
+$form = new \app\components\Form($formParams);
 $form->begin();
 $form->addField(["labelText" => "Branch", "inputType" => "kendoDropDownList", "inputName"=>"BranchId", "required" => true]);
 $form->end();
@@ -25,7 +25,7 @@ $windowParams = array(
     ,"title" => "Switch Branch"
     ,"body" => $form->getHtml()
 );
-$window = new \app\pages\KendoWindow($windowParams);
+$window = new \app\components\KendoWindow($windowParams);
 $window->begin();
 $window->end();
 $window->render();

@@ -28,7 +28,7 @@
             array("field" => "LoanPaymentReferenceNumber", "title" => "No Ref Pelunasan", "width" => 120),
         ),
     );
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $grid->end();
     $grid->render();

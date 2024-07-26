@@ -32,7 +32,7 @@
             // array("field" => "SpClassificationName", "title" => "Klasifikasi", "width" => 159),
         ),
     );
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $grid->end();
     $grid->render();

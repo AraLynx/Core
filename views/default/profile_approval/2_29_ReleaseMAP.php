@@ -13,7 +13,7 @@
                     ,"isReadOnly" => true
                     ,"ajaxJSIsRender" => false
                 ];
-                $form = new \app\pages\Form($formParams);
+                $form = new \app\components\Form($formParams);
                 $form->begin();
                     $form->addColumn([5,5,2]);
                         $form->addField(["labelText" => "Cabang", "labelCol" => 4, "inputName" => "Branch"]);
@@ -21,7 +21,7 @@
                     $form->nextColumn();
                         $form->addField(["labelText" => "No. Dokumen", "inputName" => "DocumentNumber", "inputCol" => 6]);
                         $form->addField(["labelText" => "Periode", "inputName" => "DateApply", "inputCol" => 6]);
-                    $form->endColumn();                    
+                    $form->endColumn();
                     $form->addColumn([5,5,2]);
                     $form->addField(["labelText" => "Total Biaya", "inputName" => "Subtotal", "inputType" => "kendoNumericTextBox","numericTypeDetail" => "currency","labelCol" => 4]);
                     $form->nextColumn();
@@ -48,7 +48,7 @@
                         ["field" => "CalculateBudget","title" => "Subtotal Biaya", "width" => 200],
                     ),
                 ];
-                $grid = new \app\pages\KendoGrid($gridParams);
+                $grid = new \app\components\KendoGrid($gridParams);
                 $grid->begin();
                 $grid->end();
                 $grid->render();

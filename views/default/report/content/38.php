@@ -48,11 +48,11 @@
             ["field" => "BudgetPerDays","title" => "Budget / Days", "formatType" => "currency"],
             ["field" => "BudgetPerUnits","title" => "Cost / Unit", "formatType" => "currency"],
             ["field" => "TotalBudget","title" => "Budget Total", "formatType" => "currency"],
-            
+
             ["field" => ""],
         ],
     ];
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $grid->end();
     $grid->render();

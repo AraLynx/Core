@@ -50,7 +50,7 @@
                                 ]
                             ]
                         ];
-                        $form = new \app\pages\Form($formParams);
+                        $form = new \app\components\Form($formParams);
                         $form->begin();
                         /*AKSES READ POS*/ $form->addField(["inputName" => "POSIds", "inputType" => "hidden", "inputValue" => implode(";",$_READPOSES[0])]);
                         /*COMBO BOX POS*/$form->addField(["labelText" => "POS", "inputType" => "kendoDropDownList", "selectTypeDetail" => "cbpPicker", "selectTemplates" => ["pos"], "selectCBPFilters" => ["posIds" => $_READPOSES[0]], "selectCBPIsAddAll" => true,"required" => true]);
@@ -78,7 +78,7 @@
                                 ["field" => "Index","title" => "Index", "formatType" => "dec"],
                             ],
                         ];
-                        $subGrid = new \app\pages\KendoGrid($subGridParams);
+                        $subGrid = new \app\components\KendoGrid($subGridParams);
                         $subGrid->begin();
                         $subGridDetailInitFunctionName = $subGrid->end();
                         $subGrid->render();
@@ -100,7 +100,7 @@
                             ],
                             "detailInit" => $subGridDetailInitFunctionName,
                         ];
-                        $grid = new \app\pages\KendoGrid($gridParams);
+                        $grid = new \app\components\KendoGrid($gridParams);
                         $grid->begin();
                         $grid->end();
                         $grid->render();
@@ -118,7 +118,7 @@
                         ,"submitText" => "ADD"
                         ,"submitButtonColor" => "add"
                     ];
-                    $form = new \app\pages\Form($formParams);
+                    $form = new \app\components\Form($formParams);
                     $form->begin();
                     /*AKSES READ POS*/ $form->addField(["inputName" => "POSIds", "inputType" => "hidden", "inputValue" => implode(";",$_CREATEPOSES[0])]);
                     /*COMBO BOX POS*/$form->addField(["labelText" => "POS", "inputType" => "kendoDropDownList", "selectTypeDetail" => "cbpPicker", "selectTemplates" => ["pos"], "selectCBPFilters" => ["posIds" => $_CREATEPOSES[0]],"required" => true]);
@@ -132,7 +132,7 @@
                         ,"title" => "ADD"
                         ,"body" => $form->getHtml()
                     );
-                    $window = new \app\pages\KendoWindow($windowParams);
+                    $window = new \app\components\KendoWindow($windowParams);
                     $window->begin();
                     $window->end();
                     $window->render();
@@ -145,7 +145,7 @@
                         ,"id" => "GetContent"
                         ,"isHidden" => true
                     ];
-                    $form = new \app\pages\Form($formParams);
+                    $form = new \app\components\Form($formParams);
                     $form->begin();
                     $form->addField(["inputName" => "Id"]);
                     $form->end();
@@ -161,7 +161,7 @@
                         ,"submitText" => "EDIT"
                         ,"submitButtonColor" => "edit"
                     ];
-                    $form = new \app\pages\Form($formParams);
+                    $form = new \app\components\Form($formParams);
                     $form->begin();
                     $form->addField(["inputName" => "Id", "inputType" => "hidden"]);
                     $form->addField(["labelText" => "POS", "inputName" => "POS", "inputReadOnly" => true]);
@@ -175,7 +175,7 @@
                         ,"title" => "EDIT"
                         ,"body" => $form->getHtml()
                     );
-                    $window = new \app\pages\KendoWindow($windowParams);
+                    $window = new \app\components\KendoWindow($windowParams);
                     $window->begin();
                     $window->end();
                     $window->render();
@@ -188,7 +188,7 @@
                         ,"id" => "SetDeleteContent"
                         ,"isHidden" => true
                     ];
-                    $form = new \app\pages\Form($formParams);
+                    $form = new \app\components\Form($formParams);
                     $form->begin();
                     $form->addField(["inputName" => "Id"]);
                     $form->end();
@@ -202,7 +202,7 @@
                         ,"id" => "SetReleaseContent"
                         ,"isHidden" => true
                     ];
-                    $form = new \app\pages\Form($formParams);
+                    $form = new \app\components\Form($formParams);
                     $form->begin();
                     $form->addField(["inputName" => "Id"]);
                     $form->end();
@@ -216,7 +216,7 @@
                         ,"id" => "SetUnReleaseContent"
                         ,"isHidden" => true
                     ];
-                    $form = new \app\pages\Form($formParams);
+                    $form = new \app\components\Form($formParams);
                     $form->begin();
                     $form->addField(["inputName" => "Id"]);
                     $form->end();
@@ -230,7 +230,7 @@
                         ,"id" => "SetCompleteContent"
                         ,"isHidden" => true
                     ];
-                    $form = new \app\pages\Form($formParams);
+                    $form = new \app\components\Form($formParams);
                     $form->begin();
                     $form->addField(["inputName" => "Id"]);
                     $form->end();
@@ -244,7 +244,7 @@
                         ,"id" => "SetCancelContent"
                         ,"isHidden" => true
                     ];
-                    $form = new \app\pages\Form($formParams);
+                    $form = new \app\components\Form($formParams);
                     $form->begin();
                     $form->addField(["inputName" => "Id"]);
                     $form->end();

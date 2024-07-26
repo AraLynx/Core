@@ -13,7 +13,7 @@
                     ,"isReadOnly" => true
                     ,"ajaxJSIsRender" => false
                 ];
-                $form = new \app\pages\Form($formParams);
+                $form = new \app\components\Form($formParams);
                 $form->begin();
                     $form->addField(["labelText" => "No PS", "inputName" => "NumberText"]);
                     $form->addField(["labelText" => "Cabang / POS", "inputName" => "CBPName"]);
@@ -42,7 +42,7 @@
                         ["title" => ""],
                     ],
                 ];
-                $grid = new \app\pages\KendoGrid($gridParams);
+                $grid = new \app\components\KendoGrid($gridParams);
                 $grid->begin();
                 $grid->end();
                 $grid->render();
@@ -62,7 +62,7 @@
                 ,"isReadOnly" => true
                 ,"ajaxJSIsRender" => false
             ];
-            $form = new \app\pages\Form($formParams);
+            $form = new \app\components\Form($formParams);
             $form->begin();
                 $form->addField(["labelText" => "No PS", "inputName" => "NumberText"]);
                 $form->addField(["labelText" => "Cabang / POS", "inputName" => "CBPName"]);

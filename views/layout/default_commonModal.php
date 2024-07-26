@@ -10,7 +10,7 @@ $modalParams = array(
     "body" => $body,
     "footer" => $footer
 );
-$commonModal = new \app\pages\BSModal($modalParams);
+$commonModal = new \app\components\BSModal($modalParams);
 $commonModal->begin();
 $commonModal->end();
 $commonModal->render();

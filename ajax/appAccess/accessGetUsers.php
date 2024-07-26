@@ -38,7 +38,7 @@ if($app->getStatusCode() == 100)
             ],
             "size" => 50
         );
-        $avatar = new \app\pages\Avatar($avatarParams);
+        $avatar = new \app\components\Avatar($avatarParams);
         $avatar->begin();
         $avatar->end();
 

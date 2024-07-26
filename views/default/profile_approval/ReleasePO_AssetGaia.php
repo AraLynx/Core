@@ -11,7 +11,7 @@
             ,"isReadOnly" => true
             ,"ajaxJSIsRender" => false
         ];
-        $form = new \app\pages\Form($formParams);
+        $form = new \app\components\Form($formParams);
         $form->begin();
             $form->addColumn(2);
                 $form->addHtml("<h5>PO Profile</h5>");
@@ -51,7 +51,7 @@
             ],
         );
 
-        $grid = new \app\pages\KendoGrid($gridParams);
+        $grid = new \app\components\KendoGrid($gridParams);
         $grid->begin();
         $grid->end();
         $grid->render();
@@ -70,7 +70,7 @@
             ,"isReadOnly" => true
             ,"ajaxJSIsRender" => false
         ];
-        $form = new \app\pages\Form($formParams);
+        $form = new \app\components\Form($formParams);
 
         $form->begin();
             $form->addField(["labelText" => "PO", "inputName" => "PO"]);
@@ -100,7 +100,7 @@
             ],
         );
 
-        $grid = new \app\pages\KendoGrid($gridParams);
+        $grid = new \app\components\KendoGrid($gridParams);
         $grid->begin();
         $grid->end();
         $grid->render();

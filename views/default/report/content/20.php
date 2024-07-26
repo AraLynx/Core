@@ -25,7 +25,7 @@
             array("field" => "E", "title" => "End", "formatType" => "dec"),
         ),
     );
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $grid->end();
     $grid->render();
@@ -36,7 +36,7 @@
         ,"id" => "GetReport_{$reportId}_Detail"
         ,"isHidden" => true
     ];
-    $form = new \app\pages\Form($formParams);
+    $form = new \app\components\Form($formParams);
     $form->begin();
     $form->addField(["inputName" => "PeriodeStart"]);
     $form->addField(["inputName" => "PeriodeEnd"]);
@@ -61,7 +61,7 @@
                     array("field" => "Quantity", "title" => "Quantity", "formatType" => "dec"),
                 ),
             );
-            $grid = new \app\pages\KendoGrid($gridParams);
+            $grid = new \app\components\KendoGrid($gridParams);
             $grid->begin();
             $grid->end();
 
@@ -73,7 +73,7 @@
                 ,"body" => $grid->getHtml()
                 ,"width" => "670px"
             );
-            $window = new \app\pages\KendoWindow($windowParams);
+            $window = new \app\components\KendoWindow($windowParams);
             $window->begin();
             $window->end();
             $window->render();

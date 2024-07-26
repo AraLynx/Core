@@ -11,7 +11,7 @@ $formParams = array(
     "ajaxJSIsFail" => true,
     "ajaxJSIsAlways" => true,
 );
-$form = new \app\pages\Form($formParams);
+$form = new \app\components\Form($formParams);
 $form->begin();
 if(APP_NAME == "Plutus")
 {

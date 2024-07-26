@@ -1,14 +1,20 @@
 <?php
-namespace app\pages;
-use app\core\Page;
+namespace app\components;
+use app\core\Component;
 
-class PageTemplate extends Page
+class KendoTabStrip extends Component
 {
+    protected array $contents;
+    protected int $selectedIndex = 0;
+    protected array $disabledIndexes = [];
     public function __construct(array $params)
     {
         parent::__construct($params["page"]);
         $this->id = $params["id"] ?? "";
         $this->group = $params["group"] ?? "";
+
+        $this->contents = $params["contents"] ?? [];
+        $this->selectedIndex = $params["selectedIndex"] ?? 0;
     }
 #region init
 #endregion init
@@ -21,7 +27,36 @@ class PageTemplate extends Page
         if($this->isEnd){$this->setStatusCode(603);return false;}//Page is already ended
 
         $this->isBegin = 1;
-        $this->elementId = "{$this->group}PageTemplate{$this->id}";
+        $this->elementId = "{$this->group}TabStrip{$this->id}";
+        $this->html = "<div id='{$this->elementId}'>";
+
+        $this->renderContent();
+    }
+    protected function renderContent()
+    {
+        $titles = [];
+        $bodies = [];
+        foreach($this->contents AS $index => $content)
+        {
+            $titles[] = $content["title"];
+            $bodies[] = $content["body"];
+            $disabled = $content["disable"] ?? false;
+                if($disabled)$this->disabledIndexes[] = $index;
+            $selected = $content["selected"] ?? false;
+                if($selected)$this->selectedIndex = $index;
+        }
+
+        $this->html .= "<ul>";
+        foreach($titles AS $title)
+        {
+            $this->html .= "<li>{$title}</li>";
+        }
+        $this->html .= "</ul>";
+
+        foreach($bodies AS $body)
+        {
+            $this->html .= "<div>{$body}</div>";
+        }
     }
     public function end()
     {
@@ -31,13 +66,9 @@ class PageTemplate extends Page
 
         $this->isEnd = 1;
 
-        $this->html .= "";
-        $this->html .= "<script>
-            $('#{$this->elementId}').kendoPageTemplate({
-
-            });
-            TDE.{$this->elementId} = $('#{$this->elementId}').data('kendoPageTemplate');
-        </script>";
+        $this->html .= "</div>";
+        $this->js .= "TDE.{$this->elementId} = $('#{$this->elementId}').kendoTabStrip({animation:  {open: {effects: 'fadeIn'}}}).data('kendoTabStrip');";
+        $this->js .= "TDE.{$this->elementId}.select({$this->selectedIndex});";
     }
 
 #endregion

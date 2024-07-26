@@ -1,8 +1,8 @@
 <?php
-namespace app\pages;
-use app\core\Page;
+namespace app\components;
+use app\core\Component;
 
-class KendoBarcode extends Page
+class KendoBarcode extends Component
 {
     protected string $renderAs;
     protected string $background;

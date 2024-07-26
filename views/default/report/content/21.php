@@ -23,7 +23,7 @@
         ],
         "isDetailInit" => true
     ];
-    $gridDetailInit = new \app\pages\KendoGrid($gridDetailInit);
+    $gridDetailInit = new \app\components\KendoGrid($gridDetailInit);
     $gridDetailInit->begin();
     $gridDetailInitFunctionName = $gridDetailInit->end();
     $gridDetailInit->render();
@@ -58,7 +58,7 @@
         ],
         "detailInit" => $gridDetailInitFunctionName
     );
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $grid->end();
     $grid->render();

@@ -9,7 +9,7 @@ $formParams = array(
     "ajaxJSUrl" =>  "linkDefaultAjax+'defaultGetUserSettings",
     "ajaxJSIsShowModal" => false,
 );
-$form = new \app\pages\Form($formParams);
+$form = new \app\components\Form($formParams);
 $form->begin();
 $form->end();
 $form->render();

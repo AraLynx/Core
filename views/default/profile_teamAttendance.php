@@ -10,7 +10,7 @@
         "id" => "GetData",
         "isHidden" => true,
     );
-    $form = new \app\pages\Form($formParams);
+    $form = new \app\components\Form($formParams);
     $form->begin();
     $form->addField(array("inputName" => "EmployeeId", "inputValue" => $_EMPLOYEE["Id"]));
     $form->end();
@@ -36,7 +36,7 @@
             )
         )
     );
-    $form = new \app\pages\Form($formParams);
+    $form = new \app\components\Form($formParams);
     $form->begin();
 
     $form->addField(array("inputType" => "hidden", "inputName" => "EmployeeId", "inputValue" => $_EMPLOYEE["Id"]));
@@ -73,7 +73,7 @@
         ),
     );
 
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $gridDetailInitFunctionName = $grid->end();
     $grid->render();
@@ -90,7 +90,7 @@
         "detailInit" => $gridDetailInitFunctionName,
     );
 
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $grid->end();
     $grid->render();
@@ -104,7 +104,7 @@
                 "id" => "AddRequestGetData",
                 "isHidden" => true,
             );
-            $form = new \app\pages\Form($formParams);
+            $form = new \app\components\Form($formParams);
             $form->begin();
             $form->end();
             $form->render();
@@ -115,7 +115,7 @@
                 "id" => "AddRequestGetAttendanceRequestType",
                 "isHidden" => true,
             );
-            $form = new \app\pages\Form($formParams);
+            $form = new \app\components\Form($formParams);
             $form->begin();
             $form->addField(["inputName" => "Id"]);
             $form->end();
@@ -133,7 +133,7 @@
             ,"submitButtonColor" => "success"
             ,"cancelButtonFunction" => "TDE.teamAttendanceKendoWindowAddRequest.close"
         );
-        $form = new \app\pages\Form($formParams);
+        $form = new \app\components\Form($formParams);
         $form->begin();
             $selectTemplate = "<div class=\'d-flex align-items-center\'>";
                 $selectTemplate .= "<div class=\'me-2\'><img src=\'#:data.AvatarFileLink#\' class=\'avatar avatar-30\'/></div>";
@@ -162,7 +162,7 @@
             ,"body" => $form->getHtml()
             ,"width" => "700px"
         );
-        $window = new \app\pages\KendoWindow($windowParams);
+        $window = new \app\components\KendoWindow($windowParams);
         $window->begin();
         $window->end();
         $window->render();

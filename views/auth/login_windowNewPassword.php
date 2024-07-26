@@ -18,7 +18,7 @@
         ,"submitText" => "Save New Password"
     );
 
-    $form = new \app\pages\Form($formParams);
+    $form = new \app\components\Form($formParams);
     $form->begin();
     $form->addField(array("inputType" => "hidden", "inputName" => "UserId"));
     $form->addField(array("labelText" => "Password", "labelIsShow" => false, "inputType" => "password", "inputName" => "Password", "required" => true));

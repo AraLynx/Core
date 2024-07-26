@@ -84,7 +84,7 @@
                                         "employee" => $_EMPLOYEE,
                                         "size" => 20
                                     ];
-                                    $avatar = new \app\pages\Avatar($params);
+                                    $avatar = new \app\components\Avatar($params);
                                     $avatar->begin();
                                     $avatar->end();
                                     $avatar->render();

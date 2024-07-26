@@ -31,7 +31,7 @@
                         ,"id" => "GetNewsCategories"
                         ,"isHidden" => true
                     );
-                    $form = new \app\pages\Form($formParams);
+                    $form = new \app\components\Form($formParams);
                     $form->begin();
                     $form->addField(["inputName" => "PageId", "inputValue" => $pageId]);
                     $form->addField(["inputName" => "GaiaModuleId", "inputValue" => $moduleId]);
@@ -46,7 +46,7 @@
                         ,"id" => "AddNewsCategory"
                         ,"cancelFunctions"=> ["TDE.settingsKendoWindowAddNewsCategory.close"]
                     );
-                    $form = new \app\pages\Form($formParams);
+                    $form = new \app\components\Form($formParams);
                     $form->begin();
                     $form->addField(["inputType" => "hidden", "inputName" => "PageId", "inputValue" => $pageId]);
                     $form->addField(["inputType" => "hidden", "inputName" => "GaiaModuleId", "inputValue" => $moduleId]);
@@ -61,7 +61,7 @@
                         ,"title" => "ADD NEWS CATEGORY"
                         ,"body" => $form->getHtml()
                     );
-                    $window = new \app\pages\KendoWindow($windowParams);
+                    $window = new \app\components\KendoWindow($windowParams);
                     $window->begin();
                     $window->end();
                     $window->render();
@@ -74,7 +74,7 @@
                         ,"id" => "EditNewsCategory"
                         ,"cancelFunctions"=> ["TDE.settingsKendoWindowEditNewsCategory.close"]
                     );
-                    $form = new \app\pages\Form($formParams);
+                    $form = new \app\components\Form($formParams);
                     $form->begin();
                     $form->addField(["inputType" => "hidden", "inputName" => "PageId", "inputValue" => $pageId]);
                     $form->addField(["inputType" => "hidden", "inputName" => "Id"]);
@@ -90,7 +90,7 @@
                         ,"title" => "EDIT NEWS CATEGORY"
                         ,"body" => $form->getHtml()
                     );
-                    $window = new \app\pages\KendoWindow($windowParams);
+                    $window = new \app\components\KendoWindow($windowParams);
                     $window->begin();
                     $window->end();
                     $window->render();
@@ -107,7 +107,7 @@
                     ]
                 ];
 
-                $grid = new \app\pages\KendoGrid($gridParams);
+                $grid = new \app\components\KendoGrid($gridParams);
                 $grid->begin();
                 $grid->end();
                 $grid->render();
@@ -134,7 +134,7 @@
                             )
                         )
                     );
-                    $form = new \app\pages\Form($formParams);
+                    $form = new \app\components\Form($formParams);
                     $form->begin();
                     $form->addField(["inputName" => "PageId", "inputType" => "hidden", "inputValue" => $pageId]);
                     $form->addField(["inputName" => "GaiaModuleId", "inputType" => "hidden", "inputValue" => $moduleId]);
@@ -155,7 +155,7 @@
                         ,"submitFontAwesomeIcon" => "fa-solid fa-newspaper"
                         ,"submitText" => "ADD NEWS"
                     );
-                    $form = new \app\pages\Form($formParams);
+                    $form = new \app\components\Form($formParams);
                     $form->begin();
                     $form->addField(["inputType" => "hidden", "inputName" => "PageId", "inputValue" => $pageId]);
                     $form->addField(["inputType" => "hidden", "inputName" => "GaiaModuleId", "inputValue" => $moduleId]);
@@ -172,7 +172,7 @@
                             ["field" => "Section","title" => "Section", "width" => 250],
                         ],
                     );
-                    $grid = new \app\pages\KendoGrid($gridParams);
+                    $grid = new \app\components\KendoGrid($gridParams);
                     $grid->begin();
                     $grid->end();
 
@@ -190,7 +190,7 @@
                         ,"width" => "700px"
                         ,"body" => $body
                     );
-                    $window = new \app\pages\KendoWindow($windowParams);
+                    $window = new \app\components\KendoWindow($windowParams);
                     $window->begin();
                     $window->end();
                     $window->render();
@@ -206,7 +206,7 @@
                             ,"submitFontAwesomeIcon" => "fa-regular fa-file-lines"
                             ,"submitText" => "ADD SECTION"
                         );
-                        $form = new \app\pages\Form($formParams);
+                        $form = new \app\components\Form($formParams);
                         $form->begin();
                         $form->addField(["inputType" => "hidden", "inputName" => "PageId", "inputValue" => $pageId]);
                         $form->addField(["inputType" => "hidden", "inputName" => "GaiaModuleId", "inputValue" => $moduleId]);
@@ -226,7 +226,7 @@
                             ,"width" => "700px"
                             ,"body" => $form->getHtml()
                         );
-                        $window = new \app\pages\KendoWindow($windowParams);
+                        $window = new \app\components\KendoWindow($windowParams);
                         $window->begin();
                         $window->end();
                         $window->render();

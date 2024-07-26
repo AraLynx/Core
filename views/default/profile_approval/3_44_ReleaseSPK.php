@@ -15,7 +15,7 @@
             ,"isReadOnly" => true
             ,"ajaxJSIsRender" => false
         ];
-        $form = new \app\pages\Form($formParams);
+        $form = new \app\components\Form($formParams);
 
         $form->begin();
             $form->addField(["labelText" => "SPK", "inputName" => "SPK"]);

@@ -1,8 +1,8 @@
 <?php
-namespace app\pages;
-use app\core\Page;
+namespace app\components;
+use app\core\Component;
 
-class KendoGrid extends Page
+class KendoGrid extends Component
 {
     protected array $toolbars;
     protected string $toolbarString;

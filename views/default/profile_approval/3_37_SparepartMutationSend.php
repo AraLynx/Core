@@ -13,7 +13,7 @@
                     ,"isReadOnly" => true
                     ,"ajaxJSIsRender" => false
                 ];
-                $form = new \app\pages\Form($formParams);
+                $form = new \app\components\Form($formParams);
                 $form->begin();
                     $form->addColumn([4,8]);
                         $form->addField(["labelText" => "POS Asal", "labelCol" => 3, "inputName" => "OriginPOSName"]);
@@ -22,7 +22,7 @@
                         $form->addField(["labelText" => "Tgl. Mutasi", "inputName" => "Date", "inputType" => "kendoDatePicker"]);
                         $form->addField(["labelText" => "No. Mutasi", "inputName" => "NumberText"]);
                     $form->endColumn();
-                    
+
                     $form->addField(["labelText" => "Keterangan", "inputName" => "Description"]);
 
                     $form->addColumn([4,8]);
@@ -56,7 +56,7 @@
                         ["title" => ""],
                     ],
                 ];
-                $grid = new \app\pages\KendoGrid($gridParams);
+                $grid = new \app\components\KendoGrid($gridParams);
                 $grid->begin();
                 $grid->end();
                 $grid->render();

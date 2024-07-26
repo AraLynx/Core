@@ -1,7 +1,7 @@
 <?php
 namespace app\core;
 
-class Page
+class Component
 {
     public Application $app;
     protected $page;

@@ -1,8 +1,8 @@
 <?php
-namespace app\pages;
-use app\core\Page;
+namespace app\components;
+use app\core\Component;
 
-class BSModal extends Page
+class BSModal extends Component
 {
     protected string $defaultTitle = "Information";
     protected string $defaultBody = "Info goes here";

@@ -32,7 +32,7 @@
             ["title" => "SCO / SPV / SM / BM", "width" => 250, "template" => "(#= TeamLeaderEmployeeId #) #= TeamLeaderEmployeeName # - #= TeamLeaderEmployeeGroupName #"],
         ],
     );
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $grid->end();
     $grid->render();

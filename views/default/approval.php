@@ -20,7 +20,7 @@ require_once __DIR__.'/../../params.php';
             ,"submitFontAwesomeIcon" => "fa-solid fa-search" //DEFAULT 'fa-solid fa-check'
             ,"submitText" => "SEARCH" //DEFAULT 'SUBMIT'
         );
-        $form = new \app\pages\Form($formParams);
+        $form = new \app\components\Form($formParams);
         $form->begin();
         $form->addField(["labelText" => "POS", "inputType" => "kendoDropDownList", "selectTypeDetail" => "cbpPicker", "selectTemplates" => ["pos"], "selectCBPFilters" => ["posIds" => $_READPOSES[76]], "required" => true, "inputOnChangeArray" => ["pos" => true]]);
         $form->addField(["labelText" => "Request Type", "inputName" => "RequestType", "inputType" => "kendoDropDownList", "selectOptions" => $approvalRequestTypes, "required" => true]);
@@ -53,7 +53,7 @@ require_once __DIR__.'/../../params.php';
             ),
         );
 
-        $grid = new \app\pages\KendoGrid($gridParams);
+        $grid = new \app\components\KendoGrid($gridParams);
         $grid->begin();
         $grid->end();
         $grid->render();

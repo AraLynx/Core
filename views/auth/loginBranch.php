@@ -11,7 +11,7 @@
         "ajaxJSUrl" => "'/".CORE_AJAX."default/defaultLogout",
         "submitText" => "LOGOUT"
     );
-    $form = new \app\pages\Form($formParams);
+    $form = new \app\components\Form($formParams);
     $form->begin();
     $form->addField(array("inputName" => "UserId", "inputValue" => $user->Id));
     $form->end();
@@ -44,7 +44,7 @@
                     ,"defaultLabelIsShow" => false
                     ,"buttonsIsShow" => false
                 );
-                $form = new \app\pages\Form($formParams);
+                $form = new \app\components\Form($formParams);
                 $form->begin();
                 $form->addField(array("inputType" => "kendoDropDownList", "inputName"=>"BranchId", "required" => true, "inputOnChange" => true));
                 $form->end();

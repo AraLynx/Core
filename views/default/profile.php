@@ -9,7 +9,7 @@ $formParams = array(
     "id" => "GetData",
     "isHidden" => true,
 );
-$form = new \app\pages\Form($formParams);
+$form = new \app\components\Form($formParams);
 $form->begin();
 $form->end();
 $form->render();

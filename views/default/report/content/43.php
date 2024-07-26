@@ -21,7 +21,7 @@
             ["field" => "SalesmanEmployeeName", "title" => "Nama Sales", "width" => 250],
         ],
     ];
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $grid->end();
     $grid->render();

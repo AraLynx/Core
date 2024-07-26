@@ -17,7 +17,7 @@
             ,"id" => "GenerateExcel"
             ,"isHidden" => true
         );
-        $form = new \app\pages\Form($formParams);
+        $form = new \app\components\Form($formParams);
         $form->begin();
         $form->addField(["inputName" => "ReportId"]);
         $form->addField(["inputName" => "CompanyId"]);  $form->addField(["inputName" => "CompanyName"]);
@@ -40,7 +40,7 @@
             ,"id" => "GeneratePrintOutToken"
             ,"isHidden" => true
         );
-        $form = new \app\pages\Form($formParams);
+        $form = new \app\components\Form($formParams);
         $form->begin();
         $form->addField(["inputName" => "ReportId"]);
         $form->end();
@@ -57,7 +57,7 @@
             ,"submitFontAwesomeIcon" => "fa-solid fa-search"
             ,"submitText" => "SEARCH"
         );
-        $form = new \app\pages\Form($formParams);
+        $form = new \app\components\Form($formParams);
         $form->begin();
             $form->addColumn(2);
                 $form->addField(["labelText" => "Report Owner", "inputName" => "DepartmentId", "inputType" => "kendoDropDownList", "inputOnChange" => true, "required" => true]);

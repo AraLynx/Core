@@ -23,7 +23,7 @@
             array("field" => "Salesman","width" => 150)
         ),
     );
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $grid->end();
     $grid->render();

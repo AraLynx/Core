@@ -18,7 +18,7 @@
             ["title" => " "]
         ],
     ];
-    $gridDetailInit = new \app\pages\KendoGrid($gridParams);
+    $gridDetailInit = new \app\components\KendoGrid($gridParams);
     $gridDetailInit->begin();
     $gridDetailInitFunctionName = $gridDetailInit->end();
     $gridDetailInit->render();
@@ -37,7 +37,7 @@
             ["title" => " "]
         ],
     ];
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $grid->end();
     $grid->render();

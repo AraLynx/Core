@@ -11,7 +11,7 @@ $formParams = array(
     "submitFontAwesomeIcon" => "fa-solid fa-arrow-right-from-bracket",
     "submitText" => "LOGOUT"
 );
-$form = new \app\pages\Form($formParams);
+$form = new \app\components\Form($formParams);
 $form->begin();
 $form->end();
 $form->render();

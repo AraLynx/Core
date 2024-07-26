@@ -13,7 +13,7 @@
                     ,"isReadOnly" => true
                     ,"ajaxJSIsRender" => false
                 ];
-                $form = new \app\pages\Form($formParams);
+                $form = new \app\components\Form($formParams);
                 $form->begin();
                     $form->addField(["labelText" => "POS", "inputName" => "POSName"]);
                     $form->addField(["labelText" => "Vendor", "inputName" => "PartnerName"]);
@@ -47,7 +47,7 @@
                         ["field" => "ReturnValue","title" => "Nilai DPP", "formatType" => "currency"],
                     ],
                 ];
-                $grid = new \app\pages\KendoGrid($gridParams);
+                $grid = new \app\components\KendoGrid($gridParams);
                 $grid->begin();
                 $grid->end();
                 $grid->render();

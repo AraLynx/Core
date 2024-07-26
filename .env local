@@ -1,0 +1,9 @@
+AARACORE_DB_TYPE = mysql
+ARACORE_DB_HOST = localhost
+    CORE_DB_NAME = core
+    CORE_DB_USER = core
+    CORE_DB_PASSWORD = iHA![Fnpy[4GNhaQ
+
+    WALLET_DB_NAME = wallet
+    WALLET_DB_USER = wallet
+    WALLET_DB_PASSWORD = nTPaFeFw9Zv_L0YC

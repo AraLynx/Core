@@ -7,7 +7,7 @@
         "id" => "GetUser",
         "buttonsIsShow" => false,
     );
-    $form = new \app\pages\Form($formParams);
+    $form = new \app\components\Form($formParams);
     $form->begin();
     $form->end();
     $form->render();
@@ -28,7 +28,7 @@
                 "submitFontAwesomeIcon" => "fa-solid fa-pencil",
                 "submitText" => "CHANGE AVATAR",
             );
-            $form = new \app\pages\Form($formParams);
+            $form = new \app\components\Form($formParams);
             $form->begin();
             $form->addField(array("inputType" => "kendoUpload", "uploadFileTypes" => ["jpg","jpeg","png"], "inputName" => "Avatar"));
             $form->addHtml("<div class='fst-italic text-muted'>*we recomend using a square sized picture (ex 200 by 200 px)</div>");
@@ -50,7 +50,7 @@
                 "submitText" => "SAVE SETTING",
                 "cancelFunctions" => ["TDE.accountKendoWindowEditSetting.close"]
             );
-            $form = new \app\pages\Form($formParams);
+            $form = new \app\components\Form($formParams);
             $form->begin();
                 $form->addHtml("<h6>Notification</h6>");
                 $form->addField(["labelText" => "Sound", "inputName" => "NotificationSound", "inputType" => "kendoDropDownList", "selectOptions" => $accountSettings["notificationSound"]["selectOptions"], "inputOnChange" => true]);
@@ -67,7 +67,7 @@
                 ,"width" => "400px"
                 ,"body" => $form->getHtml()
             );
-            $window = new \app\pages\KendoWindow($windowParams);
+            $window = new \app\components\KendoWindow($windowParams);
             $window->begin();
             $window->end();
             $window->render();
@@ -100,7 +100,7 @@
                     )
                 )
             );
-            $form = new \app\pages\Form($formParams);
+            $form = new \app\components\Form($formParams);
             $form->begin();
 
             $form->addField(array("labelText" => "Name", "inputName" => "EmployeeName", "inputReadOnly" => true, "inputValue" => $_EMPLOYEE["Name"]));
@@ -124,7 +124,7 @@
                 "submitText" =>  "CHANGE PASSWORD",
                 "cancelFunctions" => array("accountKendoWindowEditPasswordClose"),
             );
-            $form = new \app\pages\Form($formParams);
+            $form = new \app\components\Form($formParams);
             $form->begin();
 
             $form->addField(array("inputType" => "hidden", "inputName" => "UserId", "inputValue" => $_EMPLOYEE["UserId"]));
@@ -142,7 +142,7 @@
                 "title" => "CHANGE PASSWORD",
                 "body" => $form->getHTML(),
             );
-            $window = new \app\pages\KendoWindow($windowParams);
+            $window = new \app\components\KendoWindow($windowParams);
             $window->begin();
             $window->end();
             $window->render();

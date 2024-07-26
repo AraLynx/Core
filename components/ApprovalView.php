@@ -1,8 +1,8 @@
 <?php
-namespace app\pages;
-use app\core\Page;
+namespace app\components;
+use app\core\Component;
 
-class ApprovalView extends Page
+class ApprovalView extends Component
 {
     public function __construct(array $params)
     {
@@ -54,7 +54,7 @@ class ApprovalView extends Page
                         ["field" => "ApproveDisapproveGeneralNotes","title" => "Catatan"],
                     ]
                 ];
-                $grid = new \app\pages\KendoGrid($gridParams);
+                $grid = new \app\components\KendoGrid($gridParams);
                 $grid->begin();
                 $grid->end();
             $this->html .= $grid->getHtml();

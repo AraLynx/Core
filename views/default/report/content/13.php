@@ -48,7 +48,7 @@
             array("field" => "DPP", "title" => "DPP","formatType" => "currency"),
         ),
     );
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $grid->end();
     $grid->render();

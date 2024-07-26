@@ -8,7 +8,7 @@ $modalParams = array(
     "body" => "Page is loading...",
     "footer" => "<button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>"
 );
-$ajaxModal = new \app\pages\BSModal($modalParams);
+$ajaxModal = new \app\components\BSModal($modalParams);
 $ajaxModal->begin();
 $ajaxModal->end();
 $ajaxModal->render();

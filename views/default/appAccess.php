@@ -36,7 +36,7 @@
                     "submitFontAwesomeIcon" => "fa-solid fa-search",
                     "submitText" => "SEARCH USER",
                 );
-                $form = new \app\pages\Form($formParams);
+                $form = new \app\components\Form($formParams);
                 $form->begin();
                 $form->addField(array("inputType" => "hidden", "inputName" => "EmployeeIsActive", "inputValue" => 1));
                 $form->addField(array("labelText" => "NIP", "inputType" => "kendoNumericTextBox", "inputName" => "EmployeeId"));
@@ -59,7 +59,7 @@
                         array("field" => "POSProfile", "title" => "Placement", "width" => 200),
                     ),
                 );
-                $kendoGrid = new \app\pages\KendoGrid($kendoGridParams);
+                $kendoGrid = new \app\components\KendoGrid($kendoGridParams);
                 $kendoGrid->begin();
                 $kendoGrid->end();
                 $kendoGrid->render();
@@ -75,7 +75,7 @@
 
                     ,"submitText" => "ACTIVATE"
                 );
-                $form = new \app\pages\Form($formParams);
+                $form = new \app\components\Form($formParams);
                 $form->begin();
                 $form->addField(array("inputName" => "Id"));
                 $form->end();
@@ -94,7 +94,7 @@
                     ,"submitFontAwesomeIcon" => "fa-solid fa-ban"
                     ,"submitText" => "DEACTIVATE"
                 );
-                $form = new \app\pages\Form($formParams);
+                $form = new \app\components\Form($formParams);
                 $form->begin();
                 $form->addField(array("inputName" => "Id"));
                 $form->end();
@@ -108,7 +108,7 @@
                     "id" => "EditAccessGetAccesses",
                     "isHidden" => true
                 );
-                $form = new \app\pages\Form($formParams);
+                $form = new \app\components\Form($formParams);
                 $form->begin();
                 $form->addField(array("inputName" => "UserId"));
                 $form->end();
@@ -122,7 +122,7 @@
                     "defaultLabelCol" => 3,
                     "cancelFunctions" =>  array("TDE.accessKendoWindowEditAccess.close"),
                 );
-                $form = new \app\pages\Form($formParams);
+                $form = new \app\components\Form($formParams);
                 $form->begin();
                 $form->addField(array("inputType" => "hidden", "inputName" => "UserId"));
                     $ModuleId = 0;
@@ -155,7 +155,7 @@
                     ,"body" => $form->getHtml().$footer
 
                 );
-                $window = new \app\pages\KendoWindow($windowParams);
+                $window = new \app\components\KendoWindow($windowParams);
                 $window->begin();
                 $window->end();
                 $window->render();

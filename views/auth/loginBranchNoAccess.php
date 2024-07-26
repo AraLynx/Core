@@ -11,7 +11,7 @@ $formParams = array(
     "ajaxJSUrl" => "'/".CORE_AJAX."default/defaultLogout",
     "submitText" => "LOGOUT"
 );
-$form = new \app\pages\Form($formParams);
+$form = new \app\components\Form($formParams);
 $form->begin();
 $form->addField(array("inputType" => "hidden", "inputName" => "UserId", "inputValue" => $user->Id));
 $form->end();

@@ -10,7 +10,7 @@ $formParams = array(
     "group" => "message",
     "id" => "SendEmail",
 );
-$form = new \app\pages\Form($formParams);
+$form = new \app\components\Form($formParams);
 $form->begin();
 $form->addField(["labelName" => "Title", "inputName" => "Title"]);
 $form->addField(["labelName" => "Subject", "inputName" => "Subject", "inputType" => "textarea"]);

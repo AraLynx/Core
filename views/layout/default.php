@@ -66,6 +66,7 @@
         </script>
         <script src="/<?php echo CORE_JS;?>index.js"></script>
         <script src="/<?php echo CORE_JS;?>default.js"></script>
+        <?php require_once 'fieldJs.php';?>
 
         <?php
             echo "

@@ -6,7 +6,7 @@ $formParams = array(
     ,"id" => "form_id"
     ,"isHidden" => true
 );
-$form = new \app\pages\Form($formParams);
+$form = new \app\components\Form($formParams);
 $form->begin();
 $form->addField(array("inputType" => "password","inputValue" => "some_value"));
 $form->end();

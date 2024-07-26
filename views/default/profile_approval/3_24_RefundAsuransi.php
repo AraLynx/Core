@@ -9,7 +9,7 @@
             ,"isReadOnly" => true
             ,"ajaxJSIsRender" => false
         ];
-        $form = new \app\pages\Form($formParams);
+        $form = new \app\components\Form($formParams);
         $form->begin();
         $form->addHtml("<div><h6>PROFIL SPK</h6></div>");
         $form->addColumn(2);

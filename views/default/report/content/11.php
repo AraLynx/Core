@@ -28,7 +28,7 @@
             array("title" => "Customer", "width" => 350, "template" => "#= CustomerTitle # #= CustomerName #"),
         ),
     );
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $grid->end();
     $grid->render();

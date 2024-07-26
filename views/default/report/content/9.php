@@ -30,7 +30,7 @@
             ["field" => "CDMethod", "title" => "Jenis Setoran", "width" => 200],
         ],
     );
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $grid->end();
     $grid->render();

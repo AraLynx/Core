@@ -13,7 +13,7 @@ $params = array(
     "title" => $title,
     "body" => $body,
 );
-$changeLogKendoWindow = new \app\pages\KendoWindow($params);
+$changeLogKendoWindow = new \app\components\KendoWindow($params);
 $changeLogKendoWindow->begin();
 $changeLogKendoWindow->end();
 $changeLogKendoWindow->render();
@@ -26,7 +26,7 @@ $formParams = array(
     "buttonsIsShow" => false,
     "ajaxJSUrl" =>  "linkDefaultAjax+'defaultChangeLogGetChangeLogsFromSidebar",
 );
-$form = new \app\pages\Form($formParams);
+$form = new \app\components\Form($formParams);
 $form->begin();
 $form->end();
 $form->render();
@@ -39,7 +39,7 @@ $formParams = array(
     "buttonsIsShow" => false,
     "ajaxJSUrl" =>  "linkDefaultAjax+'defaultChangeLogGetChangeLogs",
 );
-$form = new \app\pages\Form($formParams);
+$form = new \app\components\Form($formParams);
 $form->begin();
 $form->addField(["inputName" => "ModuleId"]);
 $form->addField(["inputName" => "PageId"]);
@@ -54,7 +54,7 @@ $formParams = array(
     "buttonsIsShow" => false,
     "ajaxJSUrl" =>  "linkDefaultAjax+'defaultChangeLogGetChangeLog",
 );
-$form = new \app\pages\Form($formParams);
+$form = new \app\components\Form($formParams);
 $form->begin();
 $form->addField(["inputName" => "Id"]);
 $form->end();

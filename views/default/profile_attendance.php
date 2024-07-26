@@ -11,7 +11,7 @@
         "id" => "GetData",
         "isHidden" => true,
     );
-    $form = new \app\pages\Form($formParams);
+    $form = new \app\components\Form($formParams);
     $form->begin();
     $form->addField(array("inputName" => "EmployeeId", "inputValue" => $_EMPLOYEE["Id"]));
     $form->end();
@@ -28,7 +28,7 @@
         ,"submitFontAwesomeIcon" => "fa-solid fa-search" //DEFAULT 'fa-solid fa-check'
         ,"submitText" => "SEARCH" //DEFAULT 'SUBMIT'
     );
-    $form = new \app\pages\Form($formParams);
+    $form = new \app\components\Form($formParams);
     $form->begin();
 
     $form->addField(array("labelText" => "Periode","inputType" => "kendoDatePicker_range","inputName" => "Periode","dateTimeMin" => "x","required" => true));
@@ -53,7 +53,7 @@
         ),
     );
 
-    $grid = new \app\pages\KendoGrid($gridParams);
+    $grid = new \app\components\KendoGrid($gridParams);
     $grid->begin();
     $grid->end();
     $grid->render();

@@ -17,7 +17,7 @@
         ,"submitFontAwesomeIcon" => "fa-solid fa-search"
         ,"submitText" => "SEARCH"
     ];
-    $form = new \app\pages\Form($formParams);
+    $form = new \app\components\Form($formParams);
 
     $form->begin();
         //if(APP_NAME == "Plutus")$form->addField(["labelText" => "POS", "inputType" => "kendoDropDownList", "selectTypeDetail" => "cbpPicker", "selectTemplates" => ["pos"], "selectCBPFilters" => ["posIds" => $_READPOSES[76]], "required" => true]);
@@ -58,7 +58,7 @@
                 //["field" => "ApprovalTypeItemName","title" => "Approval Step", "width" => 200],
             ]
         ];
-        $grid = new \app\pages\KendoGrid($gridParams);
+        $grid = new \app\components\KendoGrid($gridParams);
         $grid->begin();
         $grid->end();
         $grid->render();
@@ -69,7 +69,7 @@
         ,"id" => "GetApproval"
         ,"isHidden" => true
     ];
-    $form = new \app\pages\Form($formParams);
+    $form = new \app\components\Form($formParams);
     $form->begin();
         $form->addField(["inputName" => "DBName"]);
         $form->addField(["inputName" => "ApprovalId"]);
@@ -102,7 +102,7 @@
                 ["title" => " "],
             ]
         ];
-        $grid = new \app\pages\KendoGrid($gridParams);
+        $grid = new \app\components\KendoGrid($gridParams);
         $grid->begin();
         $grid->end();
         $windowBody .= $grid->getHtml();
@@ -134,7 +134,7 @@
         ,"title" => "VIEW REQUEST"
         ,"body" => $windowBody
     );
-    $window = new \app\pages\KendoWindow($windowParams);
+    $window = new \app\components\KendoWindow($windowParams);
     $window->begin();
     $window->end();
     $window->render();
@@ -150,7 +150,7 @@
         ,"submitText" => "APPROVE"
         ,"cancelFunctions" =>  array("TDE.approvalKendoWindowSetApprove.close")
     ];
-    $form = new \app\pages\Form($formParams);
+    $form = new \app\components\Form($formParams);
     $form->begin();
     $form->addField(["inputName" => "DBName", "inputType" => "hidden"]);
     $form->addField(["inputName" => "ApprovalId", "inputType" => "hidden"]);
@@ -166,7 +166,7 @@
         ,"body" => $body
         ,"width" => "375px"
     );
-    $window = new \app\pages\KendoWindow($windowParams);
+    $window = new \app\components\KendoWindow($windowParams);
     $window->begin();
     $window->end();
     $window->render();
@@ -182,7 +182,7 @@
         ,"submitText" => "DISAPPROVE"
         ,"cancelFunctions" =>  array("TDE.approvalKendoWindowSetDisapprove.close")
     ];
-    $form = new \app\pages\Form($formParams);
+    $form = new \app\components\Form($formParams);
     $form->begin();
     $form->addField(["inputName" => "DBName", "inputType" => "hidden"]);
     $form->addField(["inputName" => "ApprovalId", "inputType" => "hidden"]);
@@ -198,7 +198,7 @@
         ,"body" => $body
         ,"width" => "375px"
     );
-    $window = new \app\pages\KendoWindow($windowParams);
+    $window = new \app\components\KendoWindow($windowParams);
     $window->begin();
     $window->end();
     $window->render();

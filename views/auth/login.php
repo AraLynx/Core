@@ -25,8 +25,16 @@
                     ,"cancelButtonIsShow" => false
                     ,"submitFontAwesomeIcon" => ""
                     ,"submitText" => "Log in"
+                    ,"additionalButtons" => [
+                        [
+                            "color" => "warning",
+                            "fontAwsomeIcon" => "fa-solid fa-pencil",
+                            "text" => "Register",
+                            "functionName" => "TDE.login.window.Register.center().open",
+                        ]
+                    ]
                 );
-                $form = new \app\pages\Form($formParams);
+                $form = new \app\components\Form($formParams);
                 $form->begin();
                 $form->addField(array("labelText" => "User Login", "inputName" => "Username", "required" => true));
                 $form->addField(array("labelText" => "Password", "inputType" => "password", "inputName" => "Password", "required" => true));
@@ -37,6 +45,33 @@
                     <p class="text-primary fw-bold text-decoration-underline" role="button" onClick="TDE.loginKendoWindowForgotPassword.center().open();">Forgot password?</p>
                 </div>
                 <?php
+                //Register
+                $formParams = array(
+                    "page" => "login"
+                    ,"group" => "login"
+                    ,"id" => "Register"
+                    ,"isAuth" => false //krn blon login
+                    ,"submitFontAwesomeIcon" => "fa-solid fa-pencil"
+                    ,"submitText" => "Register"
+                );
+                $form = new \app\components\Form($formParams);
+                $form->begin();
+                $form->addField(array("labelText" => "Email", "inputType" => "email", "inputName" => "EmailAddress", "required" => true));
+                $form->end();
+
+                $kendoWindowParams = array(
+                    "page" => "login",
+                    "group" => "login",
+                    "id" => "ForgotPassword",
+                    "title" => "ForgotPassword",
+                    "body" => $form->getHtml()
+                );
+                $kendoWindowNewPassword = new \app\components\KendoWindow($kendoWindowParams);
+                $kendoWindowNewPassword->begin();
+                $kendoWindowNewPassword->end();
+                $kendoWindowNewPassword->render();
+
+                //ForgotPassword
                 $formParams = array(
                     "page" => "login"
                     ,"group" => "login"
@@ -48,11 +83,12 @@
                     ,"submitFontAwesomeIcon" => "fa-regular fa-envelope"
                     ,"submitText" => "Send new password to mail"
                 );
-                $form = new \app\pages\Form($formParams);
+                $form = new \app\components\Form($formParams);
                 $form->begin();
                 $form->addField(array("labelText" => "NIK", "inputType" => "kendoNumericTextBox", "inputName" => "EmployeeId", "required" => true));
                 $form->addField(array("labelText" => "Email", "inputType" => "email", "inputName" => "EmailAddress", "required" => true));
                 $form->end();
+
                 $kendoWindowParams = array(
                     "page" => "login",
                     "group" => "login",
@@ -60,7 +96,7 @@
                     "title" => "ForgotPassword",
                     "body" => $form->getHtml()
                 );
-                $kendoWindowNewPassword = new \app\pages\KendoWindow($kendoWindowParams);
+                $kendoWindowNewPassword = new \app\components\KendoWindow($kendoWindowParams);
                 $kendoWindowNewPassword->begin();
                 $kendoWindowNewPassword->end();
                 $kendoWindowNewPassword->render();
@@ -86,7 +122,7 @@ $kendoWindowParams = array(
     "title" => "NEW PASSWORD",
     "body" => $body
 );
-$kendoWindowNewPassword = new \app\pages\KendoWindow($kendoWindowParams);
+$kendoWindowNewPassword = new \app\components\KendoWindow($kendoWindowParams);
 $kendoWindowNewPassword->begin();
 $kendoWindowNewPassword->end();
 $kendoWindowNewPassword->render();

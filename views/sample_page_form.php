@@ -57,7 +57,7 @@ $formParams = array(
         ,"ajaxJSIsAlways" => true //DEFAULT false
             ,"ajaxJSAlwaysFunction" => "someJSFunctionName" //DEFAULT submitFunctionName+'Always'
 );
-$form = new \app\pages\Form($formParams);
+$form = new \app\components\Form($formParams);
 $form->begin();
 
 #region STEP
